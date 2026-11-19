@@ -1,0 +1,106 @@
+# Context
+
+This script uses Medicare encounters and TAF claims to identify individuals with the following behavioral health conditions:   
+
+- Mild or moderate mental illness  
+- Serious mental illness  
+
+The diagnosis and procedure codes that identify these conditions are provided in the following look-up table:  
+
+- mental_health_icd_codes.csv  
+
+Mental health ICD codes were derived from the [Agency for Healthcare Research and Quality Clinical Classifications Software Refined (CCSR)](https://hcup-us.ahrq.gov/toolssoftware/ccsr/ccs_refined.jsp). We used ICD codes from the CCSR body system MBD (mental, behavioral, developmental) to create the look-up table `mental_health_icd_codes.csv`. We excluded MBD categories related to substance use disorders (MBD017 - MBD026 and MBD028-MBD034). We also excluded any ICD codes related to a physiologic condition and psychoses due to psychoactive substances and childhood conditions. 
+
+We categorized remaining ICD codes for major depressive disorder, bipolar I, and schizophrenic disorders as severe mental illness (SMI). Non-SMI ICD codes were categorized as mild/moderate mental health conditions. 
+
+Individuals with at least 1 inpatient claim OR 2 other non-drug claims of any service type with diagnosis codes in any position were flagged as having the condition. When two claims are required, they must occur at least one day apart.  
+
+This code assumes the user has used Medicare encounters and TAF claims to create a table in long format with the following columns:  
+
+- bene_id  
+- dx_code (all diagnosis codes attributed to the bene_id per year, non-inpatient codes occurred at least one day apart)
+- file_type (values of "inpatient" or "other") where "other" file types include: TAF Long-term File, TAF Other Services File, MA Carrier, MA Outpatient, MA SNF.
+
+
+# Load libraries
+
+```{r}
+library(data.table)
+library(magrittr)
+library(dplyr)  
+```
+
+
+# Load ICD look-up
+
+```{r}
+# load look-up
+mh_codes <- fread("mental_health_icd_codes.csv")
+
+# create a categorical condition flag that is smi, mild_mod_mh, or NA
+mh_codes <- mh_codes[, .(icd10 = code,
+                         condition = fcase(smi==1, "smi",
+                                           mild_mod_mh==1, "mild_mod_mh", 
+                                           default = NA_character_))]
+```
+
+
+# Create function 
+
+This function identifies either SMI or mild/moderate MH diagnoses in claims. It has 3 inputs:  
+
+- `claims_code_table` = The long-format table of dx codes you have created from MA encounters or TAF claims 
+- `condition_to_flag` = Options: 'smi' or 'mild_mod_mh'     
+- `flag_name`         = Name of the final flag to appear in the data (e.g. 'smi', 'mild_mod_mh')      
+
+```{r}
+mh_flags <- function(claims_table, condition_to_flag, flag_name) {
+  
+    # flag any line with a dx code for this condition
+    claims_table[, condition_tmp:= fcase(code %in% mh_codes[condition==condition_to_flag]$icd10, 1, default = 0)]
+    
+    # sum the number of codes present in non-inpatient files by bene_id
+    claims_table[file %in% c("other"), condition_sum:= fcase(max(condition_tmp) == 1, sum(condition_tmp), default = 0), 
+                 by = .(bene_id)]
+    
+    # change any NAs from that last fcase to 0
+    claims_table[(is.na(condition_sum)), ':=' (condition_sum = 0)]
+    
+    # create flag  
+    claims_table[, condition_flag:= fcase(any((file %in% c('inpatient') & 
+                                        condition_tmp==1) | condition_sum >= 2), 1, default = 0), by = .(bene_id)]
+    
+    # rename vars
+    setnames(claims_table, old = c('condition_flag'), new = c(flag_name))
+    
+    return(claims_table)
+}
+```
+
+
+# Flag MH conditions
+
+```{r}
+# smi  
+claims <- mh_flags(claims, 'smi', 'smi')
+
+# mild_mod_mh  
+claims <- mh_flags(claims, 'mild_mod_mh', 'mild_mod_mh')
+```
+
+
+# Roll tables up to bene-level
+
+```{r}
+# exclude cols we no long need
+cols <- c("file_type", "code", "condition_tmp", "condition_sum")
+claims[, (cols):= NULL]
+ 
+# roll up by beneficiary - take the max of each col
+mh_flags <- claims[, lapply(.SD, max), by = .(bene_id)]
+
+# merge MH flags to cohort table
+```
+
+
+

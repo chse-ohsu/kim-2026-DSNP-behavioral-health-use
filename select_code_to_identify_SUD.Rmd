@@ -1,0 +1,287 @@
+# Context
+
+This script uses Medicare encounters and TAF claims to identify individuals with substance use disorder. The diagnosis and procedure codes that identify these conditions are provided in the following look-up table:  
+  
+- sud_codes.RData   
+  
+SUD codes were derived from [Chronic Conditions Data Warehouse Other Chronic Health, Mental Health, and Potentially Disabling Conditions Algorithms](https://www2.ccwdata.org/web/guest/condition-categories-other) for the following conditions:  
+
+- Alcohol use disorder  
+- Drug use disorders  
+- Opioid use disorder  
+  
+Individuals with at least 1 inpatient claim OR 2 other non-drug claims of any service type with diagnosis codes in any position, OR at least one claim with a relevant procedure or national drug code, were flagged as having the condition. When two claims are required, they must occur at least one day apart.    
+  
+This code assumes the user has bound Medicare encounters and TAF claims into two tables (one inpatient that consists of MA Inpatient, TAF Inpatient, and TAF Long-term files called "ip_dat"; and one outpatient that consists of MA Outpatient, MA Carrier, and TAF Other Services files called "op_dat") with the following columns in each:  
+   
+- bene_id  
+- claim_id  
+- claim begin date  
+- claim end date  
+- diagnosis codes (all available diagnosis columns from each file type, including e codes)  
+- ICD procedure code  
+- HCPCS code  
+- national drug code (ndc)  
+  
+  
+# Load libraries
+
+```{r}
+library(data.table)
+library(magrittr)
+library(dplyr)  
+```
+
+
+# Load SUD code lookup table  
+
+This file includes lists of diagnosis, procedure, and ndc codes for CCW Other Chronic Condition algorithms of opioid use disorder, drug use disorder, and alcohol use disorder.  
+
+```{r}
+load("sud_codes.RData")
+```
+
+
+# Write functions
+
+## Flag diagnosis codes  
+
+This function flags each claim row with an indicator for alcohol use disorder (AUD), drug use disorder (DUD), opioid use disorder (OUD), or opioid-related hospital/ED visit based on CCW diagnosis code lists. It has 3 inputs:  
+
+- `dt` = The claims data to flag  
+- `col_names` = A list of column names that contain diagnosis codes to search  
+- `ccw_sud` = The ccw_sud code lookup table previously loaded  
+
+```{r}
+set_sud_flags_dx <- function(dt, col_names, ccw_sud) {
+  
+  for (col in col_names) {
+    
+    stopifnot(length(dt[[col]]) == nrow(dt))
+    
+    # aud flag
+    dt[get(col) %in% ccw_sud$aud$diagnosis$icd10, sud_aud_dx := TRUE]
+    
+    # dud flag
+    dt[get(col) %in% ccw_sud$dud$diagnosis$icd10, sud_dud_dx := TRUE]
+    
+    # oud #2 (diagnosis code) flag
+    dt[get(col) %in% ccw_sud$oud$diagnosis$icd10, sud_oud_dx := TRUE]
+    
+    # oud #3 (diagnosis code) flag
+    dt[get(col) %in% ccw_sud$oud$hospital_ed$icd10, sud_oud_hosp_dx := TRUE]
+  
+  }
+}
+```
+
+
+## Flag procedure codes
+
+This function flags each claim row with an indicator for alcohol use disorder (AUD), drug use disorder (DUD), opioid use disorder (OUD) based on CCW procedure code lists. It has 3 inputs:  
+
+- `dt` = The claims data to flag  
+- `col_names` = A list of column names that contain procedure codes to search  
+- `ccw_sud` = The ccw_sud code lookup table previously loaded  
+
+```{r}
+set_sud_flags_proc <- function(dt, col_names, ccw_sud) {
+  
+  for (col in col_names) {
+    
+    stopifnot(length(dt[[col]]) == nrow(dt))
+    
+    # aud flag
+    dt[get(col) %in% ccw_sud$aud$procedure$icd10, sud_aud_proc := TRUE]
+    
+    # dud flag
+    dt[get(col) %in% ccw_sud$dud$procedure$icd10, sud_dud_proc := TRUE]
+    
+    # oud #2 (procedure codes) flag
+    dt[get(col) %in% ccw_sud$oud$procedure$icd10, sud_oud_proc := TRUE]
+    
+    # oud #4 (medication assisted therapy) flag
+    dt[get(col) %in% ccw_sud$oud$mat$hcpcs, sud_oud_mat_hcpcs := TRUE]
+    
+  }
+}
+```
+
+
+# Initiate new flags  
+
+Here we create the new aud, sud, and oud flags and set the values to FALSE. We use the functions above to identify cases where the criteria is met and change the value to TRUE. 
+
+Note: Flags based on ndc codes ('sud_oud_mat_ndc_bupe', 'sud_oud_mat_ndc_nalt') do not have a separate function. 
+
+```{r}
+new_cols <- c('sud_aud_dx', 'sud_oud_dx', 'sud_oud_hosp_dx', 'sud_dud_dx',            # dx flags (4)
+              'sud_aud_proc','sud_dud_proc', 'sud_oud_proc', 'sud_oud_mat_hcpcs',     # proc_cd flags (4)
+              'sud_oud_mat_ndc_bupe', 'sud_oud_mat_ndc_nalt')                         # ndc flags (2)
+
+ip_dat[, (new_cols):= FALSE]
+op_dat[, (new_cols):= FALSE]
+```
+
+
+## Flag diagnosis codes
+
+```{r}
+# inpatient claims
+set_sud_flags_dx(ip_dat, paste0("icd_dgns_cd", 1:25), ccw_sud)
+
+# outpatient claims
+set_sud_flags_dx(op_dat, paste0("icd_dgns_cd", 1:25), ccw_sud)
+```
+
+
+## Flag diagnosis e-codes
+
+```{r}
+#inpatient claims
+set_sud_flags_dx(ip_dat, paste0("dgns_e_cd", 1:10), ccw_sud)
+
+# outpatient claims
+set_sud_flags_dx(op_dat, paste0("dgns_e_cd", 1:10), ccw_sud)
+```
+
+
+## Flag procedure codes
+
+```{r}
+# inpatient ICD procedure codes
+set_sud_flags_proc(ip_dat, paste0("icd_prcdr_cd", 1:13), ccw_sud)
+
+# inpatient HCPCS codes
+set_sud_flags_proc(ip_dat, "hcpcs_cd", ccw_sud) 
+
+# outpatient ICD procedure codes
+set_sud_flags_proc(op_dat, paste0("icd_prcdr_cd", 1:13), ccw_sud)
+
+# outpatient HCPCS codes
+set_sud_flags_proc(op_dat, "hcpcs_cd", ccw_sud) 
+```
+
+
+## Flag national drug codes
+
+```{r}
+# inpatient
+ip_dat[ndc %in% ccw_sud$oud$mat$ndc$buprenorphine, sud_oud_mat_ndc_bupe := TRUE]
+ip_dat[ndc %in% ccw_sud$oud$mat$ndc$naltrexone, sud_oud_mat_ndc_nalt := TRUE]
+
+# outpatient
+op_dat[ndc %in% ccw_sud$oud$mat$ndc$buprenorphine, sud_oud_mat_ndc_bupe := TRUE]
+op_dat[ndc %in% ccw_sud$oud$mat$ndc$naltrexone, sud_oud_mat_ndc_nalt := TRUE]
+```
+
+
+# Roll flags to the claim-level
+
+```{r}
+# inpatient
+ip_flags <- ip_dat[, lapply(.SD, max, na.rm = TRUE),
+                     by = .(bene_id, claim_id, claim_begin_dt, claim_end_dt),
+                     .SDcols = patterns("^sud_")]
+
+# outpatient
+op_flags <- op_dat[, lapply(.SD, max, na.rm = TRUE),
+                     by = .(bene_id, claim_id, claim_begin_dt, claim_end_dt),
+                     .SDcols = patterns("^sud_")]
+```
+
+
+# Count claims
+
+```{r}
+# inpatient
+ip_flags <- ip_flags[, lapply(.SD, sum, na.rm = TRUE), 
+                     by = .(bene_id),
+                     .SDcols = patterns("^sud_")]
+
+# outpatient
+# check for overlapping claim dates
+op_flags[, contiguous := chse::overlapping(start = claim_begin_dt,
+                                           end = claim_end_dt,
+                                           maxgap = 0), by = .(bene_id)]
+# aggregate overlapping claim dates
+op_flags <- op_flags[, lapply(.SD, max, na.rm = TRUE),
+                     by = .(bene_id, contiguous),
+                     .SDcols = patterns("^sud_")]
+
+# count number of unique encounters
+op_flags <- op_flags[, lapply(.SD, sum, na.rm = TRUE),
+                     by = .(bene_id),
+                     .SDcols = patterns("^sud_")]
+```
+
+
+# Create unique beneficiary table
+
+```{r}
+# create table of unique bene)ids and join flags
+benes <- unique(rbind(ip_flags[, .(bene_id)], 
+                      op_flags[, .(bene_id)]))  %>%
+  
+  # join inpatient flags  
+  left_join(ip_flags %>% 
+              rename_with(.cols = matches("^sud_"), ~ paste0("ip_", .x)), 
+            by = c("bene_id")) %>%
+  
+  # join outpatient flags 
+  left_join(op_flags %>% 
+              rename_with(.cols = matches("^sud_"), ~ paste0("op_", .x)), 
+            by = c("bene_id"))  %>%
+  mutate(across(matches("_sud_"), ~ coalesce(.x, 0)))
+```
+
+
+# Create final SUD flags
+
+- At least 1 inpatient claim OR 2+ other non-drug claims of any service type  
+- Procedure and NDC codes require only one claim to qualify  
+
+```{r}
+sud_flags <- benes %>% 
+  
+  summarise(across(matches("_sud_"), ~ sum(.x)),
+            .by = c("bene_id")) %>% 
+  
+          # aud flags
+  mutate(sud_aud = ip_sud_aud_dx >= 1 | 
+                   ip_sud_aud_proc >= 1 |
+                   op_sud_aud_dx >= 2 |
+                   op_sud_aud_proc >= 1,
+         
+         # dud flags
+         sud_dud = ip_sud_dud_dx >= 1 | 
+                   ip_sud_dud_proc >= 1 |
+                   op_sud_dud_dx >= 2 |
+                   op_sud_dud_proc >= 1,
+         
+         # oud #2
+         sud_oud2 = ip_sud_oud_dx >= 1 | 
+                    ip_sud_oud_proc >= 1 |
+                    op_sud_oud_dx >= 2 |
+                    op_sud_oud_proc >= 1,
+         
+         # oud #3
+         sud_oud3 = ip_sud_oud_hosp_dx >= 1 |
+                    op_sud_oud_hosp_dx >= 2,
+         
+         # oud #4
+         sud_oud4 = ip_sud_oud_mat_hcpcs >= 1 |
+                    ip_sud_oud_mat_hcpcs_meth >= 1 |
+                    ip_sud_oud_mat_cpt_meth  >= 1 |
+                    ip_sud_oud_mat_ndc_bupe >= 1 |
+                    ip_sud_oud_mat_ndc_nalt >= 1 |
+                    op_sud_oud_mat_hcpcs >= 1 |
+                    op_sud_oud_mat_hcpcs_meth >= 1 |
+                    op_sud_oud_mat_cpt_meth >= 1 |
+                    op_sud_oud_mat_ndc_bupe >= 1 |
+                    op_sud_oud_mat_ndc_nalt >= 1) %>%
+  
+  mutate(sud = sud_aud | sud_dud | sud_oud2 | sud_oud3 | sud_oud4) %>%
+  as.data.table()
+```
+

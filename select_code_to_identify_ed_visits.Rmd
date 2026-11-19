@@ -1,0 +1,269 @@
+# Context
+
+This script provides select code to count Medicare and Medicaid behavioral health emergency department (ED) visits. Behavioral health ED visits have a primary diagnosis code for substance use disorder, severe mental illness, or mild-to-moderate mental health diagnoses (as defined in scripts `select_code_to_identify_MH_conditions.Rmd` and `select_code_to_identify_SUD.Rmd`).
+
+We identify ED visits as described in [Handel et al. 2008](https://pubmed.ncbi.nlm.nih.gov/17996983/) as any claim where:  
+  
+- The claim contains a CPT code for ED visit (CPT 99281-99285) or advanced life support (CPT 99288)    
+- The claim contains an ED Revenue code (450-459 or 981) and is not paired with a laboratory only CPT   
+
+To identify ED visits, this code assumes the user has created a combined claims table of Medicare encounters (from the Inpatient, Outpatient, and Carrier files) and TAF claims (from the Inpatient and Other Services file). 
+
+Prior to combining claim sets, users should also exclude TAF crossover claims (crossover_clm_ind == 1) as well as Medicare encounters with procedure code modifiers that indicate a "Medicaid level of care" and were thus not paid for by Medicare, including U1-U9, UA, UB, UC, and UD. See [here](https://www.hcpcsdata.com/Modifiers/U)  
+
+We used claim line dates to identify ED visits. When combining claim sets, users should combine the line_from_dt and line_thru_dt values on Medicare professional encounters with rev_cntr_from_dt and rev_cntr_thru_dt values on Medicare facility encounters, respectively, effectively creating a single line from and a single line thru date. 
+
+Once claim sets are combined, the claims table (named "claims" below) should include the following columns:  
+- bene_id  
+- claim_id  
+- from_dt (claim header begin date)    
+- thru_dt (claim header end date)  
+- line_from_dt (either the line date or revenue center from date)
+- line_thru_dt (either the line date or revenue center thru date)
+- primary diagnosis code  
+- revenue center code  
+- procedure code (cpt/hcpcs codes)  
+- ot_accmdtn_hcpcs_rate (from the TAF Other Services file)
+- source file ("taf" or "ma") 
+- file type ("ma_op", "ma_ip", "ma_car", "taf_ot", "taf_ip")
+
+
+# Load behavioral health code lookup tables
+
+```{r}
+# mental health icd codes
+mh_codes <- fread("mental_health_icd_codes.csv")
+
+# sud icd codes
+load("ccw30_sud_codes.RData")
+
+# behavioral health outpatient cpt codes
+bh_cpts <- fread("outpt_bh_cpts.csv")
+```
+
+
+# Define ED codes
+
+```{r}
+# set codes as described in Handel et al.
+cpt_handel <- as.character(99281:99285, 99288)
+rev_handel <- str_pad(c(450:459, 981), width = 4, side = "left", pad = "0")
+cpt_lab_handel <- c("G0001", 36400:36415, 43200:43272, 45300:45387, 70010:79999, 80048:89399, 93000:93278)
+```
+
+
+# Flag and restrict to ED claims
+
+```{r}
+# flag if claim line has ED revenue or CPT
+claims[, `:=` (ed_cpt = hcpcs_cd %in% cpt_handel | ot_accmdtn_hcpcs_rate %in% cpt_handel,
+               ed_lab_only = rev_cntr %in% rev_handel & (hcpcs_cd %in% cpt_lab_handel | 
+                                                            ot_accmdtn_hcpcs_rate %in% cpt_lab_handel),
+               ed_rev = rev_cntr %in% rev_handel)]
+
+# flag ED
+claims[ , ed :=  ed_cpt == T | (ed_rev == T & ed_lab_only == F)]
+
+# keep only ED claims 
+ed_claims <- claims[ed == T]
+```
+
+
+# Flag and restrict to behavioral health visits
+
+```{r}
+# flag each BH condition catgegory
+ed_claims[ , `:=` (sud_dx  = icd_dgns_cd1 %in% sud_icd10,
+                   mmmi_dx = icd_dgns_cd1 %in% mh_codes[condition == "mild_mod_mh", icd10],
+                   smi_dx  = icd_dgns_cd1 %in% mh_codes[condition == "smi", icd10])] %>%
+  .[ , bh_dx := mmmi_dx == T | sud_dx == T | smi_dx == T]
+
+# keep only BH claims 
+ed_claims <- ed_claims[bh_dx == T]
+```
+
+
+# Identify ED visit dates
+
+Here we replace the claim header dates with line dates when available. Note: For MA encounters, revenue center dates and line dates were combined into one variable (line_from_dt and line_thru_dt) prior to combining MA and TAF claims.
+
+```{r}
+# replace the claim header date with the line/revenue center date when available
+ed_claims[ , `:=` (from_dt = as.Date(ifelse(!is.na(line_from_dt), line_from_dt, from_dt)),
+                   thru_dt = as.Date(ifelse(!is.na(line_thru_dt), line_thru_dt, thru_dt)))]
+```
+
+
+# Transform data to one day per row
+
+```{r}
+# flag one day claims
+ed_claims[ , days := as.numeric(thru_dt - from_dt + 1)] %>% .[ , oneday := days == 1]
+
+# separate one day and multi-day claims
+ed_multiday <- ed_claims[oneday == F] %>% .[ , rownum := seq_along(1:.N)]
+ed_oneday <- ed_claims[oneday == T]
+
+# expand long so each day is on a separate row
+ed_multiday_expand <- ed_multiday[, .(date = seq(from_dt, thru_dt, by = "day")), by = rownum]
+
+# add back other vars
+ed_multiday_expand <- merge(ed_multiday_expand, 
+                            ed_multiday[ , c("from_dt", "thru_dt") := NULL],
+                            by = "rownum", all = T)
+
+# set from_dt and thru_dt equal to date
+ed_multiday_expand[, `:=`(from_dt = date, thru_dt = date)] %>%
+  .[, c("date", "rownum") := NULL]
+
+# rejoin one-day and multi-day claims,  nrow should grow. 
+nrow(ed_claims)
+ed_claims <- rbind(ed_oneday, ed_multiday_expand)
+nrow(ed_claims)
+
+#drop vars
+ed_claims[ , c("days", "oneday") := NULL]
+rm(ed_oneday, ed_multiday, ed_multiday_expand)
+```
+
+
+# Drop more crossover claims from TAF
+
+Some TAF claims have the same date of service, primary diagnosis code, and procedure code as a MA encounter. We consider these "crossover claims" that weren't flagged by crossover_clm_ind == 1. We exclude these from the dataset and attribute these services to MA.  
+
+Before checking to see if MA and TAF claims match by procedure code, we need to clean up the TAF OT procedure code, since it can be in one of two different fields (hcpcs_cd or ot_accmdtn_hcpcs_rate). We'll create a unified procedure code variable that pulls the ED CPT from whichever field has it. 
+
+```{r}
+# if the ED CPT code is in the ot_accmdtn_hcpcs_rate field, move that value into hcpcs_cd
+ed_claims[ed_cpt == T & !hcpcs_cd %in% cpt_handel, hcpcs_cd := ot_accmdtn_hcpcs_rate]
+
+ed_claims$ot_accmdtn_hcpcs_rate <- NULL
+```
+
+```{r}
+# separate MA and TAF
+ed_all_ma  <- ed_claims[source == "ma"]
+ed_all_taf <- ed_claims[source == "taf"] 
+
+# merge MA onto TAF by date, diagnosis, and CPT
+ed_all_taf <- merge(ed_all_taf,
+                    unique(ed_all_ma[!is.na(hcpcs_cd), .(bene_id, from_dt, thru_dt, 
+                                                         icd_dgns_cd1, hcpcs_cd, crossover_cpt = T)]),
+                    by = c("bene_id", "from_dt", "thru_dt", "icd_dgns_cd1", "hcpcs_cd"), 
+                    all.x = T) %>%
+  .[is.na(crossover_cpt) , crossover_cpt := F]
+
+# merge MA onto TAF by date, diagnosis, and Rev code
+ed_all_taf <- merge(ed_all_taf,
+                    unique(ed_all_ma[!is.na(rev_cntr), .(bene_id, from_dt, thru_dt, 
+                                                         icd_dgns_cd1, rev_cntr, crossover_rev = T)]),
+                    by = c("bene_id", "from_dt", "thru_dt", "icd_dgns_cd1", "rev_cntr"), 
+                    all.x = T) %>%
+  .[is.na(crossover_rev) , crossover_rev := F]
+
+
+
+# create overall flag - true if: rev is crossover and cpt is crossover or missing, OR
+#                                cpt is crossover and rev is crossover or missing
+# (necessary because some days have both rev and CPT)
+ed_all_taf[ , crossover := (crossover_rev == T & (crossover_cpt == T | is.na(hcpcs_cd))) |
+                           (crossover_cpt == T & (crossover_rev == T | is.na(rev_cntr)))] %>%
+  .[ , c("crossover_rev", "crossover_cpt") := NULL]
+
+# bind TAF and MA back together
+ed_claims <- rbind(ed_all_taf, ed_all_ma[ , crossover := F])
+
+# drop crossover claims
+ed_claims <- ed_claims[crossover == F]
+```
+
+
+# Roll up days to visits
+
+Here we group together contiguous days, regardless of payer, so we can count distinct visits.
+
+```{r}
+# order data
+ed_claims <- ed_claims[order(bene_id, from_dt, thru_dt)]
+
+# group contiguous days
+ed_claims[ , visit_id := chse::overlapping(from_dt, 
+                                           thru_dt, 
+                                           maxgap = 0), by = .(bene_id)]
+
+# roll up values by visit
+ed_claims[ , `:=` (start_dt = min(from_dt), 
+                   end_dt = max(thru_dt), 
+                   smi_dx = max(smi_dx), 
+                   mmmi_dx = max(mmmi_dx), 
+                   sud_dx = max(sud_dx),
+                   taf = max(source == "taf"), 
+                   ma = max(source == "ma")), by = .(bene_id, visit_id)] %>%
+  .[ , days := as.numeric(end_dt - start_dt + 1)] 
+```
+
+
+# Assign diagnosis category
+
+We assign diagnosis category hierarchically and count the visit as SUD if any visit claims were flagged as SUD, then SMI if any SMI, then mild to moderate mental health.  
+
+```{r}
+ed_claims[ , dx_cat := fcase(sud_dx  == T, "sud",
+                             smi_dx  == T, "smi",
+                             mmmi_dx == T, "mmmi")]
+```
+
+
+# Make unique
+
+Make claims unique by visit date, diagnosis category, and payer
+
+```{r}
+ed_visits <- unique(ed_claims[ , .(bene_id, start_dt, dx_cat, ma, taf)])
+```
+
+
+# Limit to bene months observed
+
+Keep only ed visits with a start date during which the enrollee was observed in the study cohort. In this chunk, "mbsf" is a table of enrollees in the analytic study sample at the enrollee-month level.
+
+```{r}
+ed_visits[, bene_mo := paste(bene_id, month(start_dt), year(start_dt), sep = "_")]
+ed_visits <- merge(ed_visits, mbsf[ , .(bene_mo)], by = "bene_mo", all = F)
+```
+
+
+# Categorize payer
+
+```{r}
+# recreate source/payer variable
+ed_visits[ , source := fcase(taf == 1 & ma == 1, "tafma",
+                             taf == 1, "taf", 
+                             ma  == 1, "ma")]
+```
+
+
+# Sum visits by year
+
+Sum visits by diagnosis category and payer
+
+```{r}
+# create year variable
+ed_visits[ , year := year(start_dt)]
+
+# sum visits by setting and diagnosis
+ed_visits <- ed_visits[ , .(n = uniqueN(start_dt)), by = .(bene_id, year, source, dx_cat)]
+
+# create a column name combining source and dx_cat
+ed_visits[ , varname := paste("ed", dx_cat, source, "n", sep = "_")]
+
+# reshape to wide format
+ed_visits <- dcast(ed_visits, bene_id + year ~ varname, value.var = "n", fill = 0) 
+
+# set missing values to 0
+outcome_vars <- names(ed_visits)[grepl("_taf|_ma", names(ed_visits))]
+ed_visits[, (outcome_vars) := lapply(.SD, function(x) ifelse(is.na(x), 0, x)), .SDcols = outcome_vars]
+ed_visits[, lapply(.SD, max), .SDcols = outcome_vars]
+```
+
+

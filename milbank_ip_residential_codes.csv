@@ -1,0 +1,83 @@
+code,setting,description,code_type,rev_range
+99221,Inpatient,Initial Hospital Care for Evaluation and Management of a Patient which requires  a detailed or comprehensive history/exam and MDM is of straightforward or of low complexity,CPT,
+99222,Inpatient,Initial Hospital Care for Evaluation and Management of a Patient which requires  a comprehensive history/exam and of MDM is of moderate complexity,CPT,
+99223,Inpatient,Initial Hospital Care for Evaluation and Management of a Patient which requires  a comprehensive history/exam and of MDM is of high complexity,CPT,
+99231,Inpatient,Subsequent Hospital Care for Evaluation and Management of a Patient which requires a problem-focused history/exam and MDM is of straightforward or of low complexity,CPT,
+99232,Inpatient,Subsequent Hospital Care for Evaluation and Management of a Patient which requires an expanded problem-focused history/exam and MDM is of moderate complexity,CPT,
+99233,Inpatient,Subsequent Hospital Care for Evaluation and Management of a Patient which requires a detailed history/exam and MDM is of high complexity,CPT,
+99238,Inpatient,"Hospital Discharge, Day Management; 30 minutes or less",CPT,
+99239,Inpatient,"Hospital Discharge, Day Management; more than 30 minutes",CPT,
+99251,Inpatient,Inpatient Consultation for New or Established Patient which requires a problem-focused history/exam and straightforward MDM,CPT,
+99252,Inpatient,Inpatient Consultation for New or Established Patient which requires an expanded problem-focused history/exam and straightforward MDM,CPT,
+99253,Inpatient,Inpatient Consultation for New or Established Patient which requires a detailed history/exam and MDM is of low complexity,CPT,
+99254,Inpatient,Inpatient Consultation for New or Established Patient which requires a comprehensive history/exam and MDM is of moderate complexity,CPT,
+99255,Inpatient,Inpatient Consultation for New or Established Patient which requires a comprehensive history/exam and MDM is of high complexity,CPT,
+99291,Inpatient,"Critical Care, Evaluation and Management of the Critically Ill or Critically Injured Patient; First 30-74 minutes",CPT,
+99292,Inpatient,"Critical Care, Evaluation and Management of the Critically Ill or Critically Injured Patient; Each Additional 30 minutes (list separately in addition to primary procedure)",CPT,
+H0010,Residential,Alcohol and/or Drug Services; Sub-Acute Detoxification (residential addiction program inpatient),CPT,
+H0011,Residential,Alcohol and/or Drug Services; Acute Detoxification (residential addiction program inpatient),CPT,
+H0012,Residential,Alcohol and/or Drug Services; Sub-Acute Detoxification (residential addiction program outpatient),CPT,
+H0013,Residential,Alcohol and/or Drug Services; Acute Detoxification (residential addiction program outpatient),CPT,
+H0017,Residential,"Behavioral Health; Residential (hospital residential treatment program), without room and board, per diem",CPT,
+H0018,Residential,"Behavioral Health; Short-Term Residential (non-hospital residential treatment program), without room and board, per diem",CPT,
+H0019,Residential,"Behavioral Health; Long-Term Residential (non-medical, non-acute care in a residential treatment program where stay is typically longer than 30 days), without room and board, per diem ",CPT,
+21,Inpatient,Inpatient Hospital,POS,
+51,Inpatient,Inpatient Psychiatric Facility,POS,
+55,Residential,Residential Substance Abuse Treatment Facility,POS,
+56,"Inpatient, Residential",Psychiatric Residential Treatment Center,POS,
+0100,Inpatient,All inclusive room and board plus ancillary,Revenue,0100 - 0101 - All-inclusive Rate
+0101,Inpatient,All inclusive room and board,Revenue,0100 - 0101 - All-inclusive Rate
+0110,Inpatient,General,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0111,Inpatient,Medical/Surgical/GYN,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0113,Inpatient,Pediatric,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0114,Inpatient,Psychiatric,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0116,Inpatient,Detoxification,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0118,Inpatient,Rehabilitation,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0119,Inpatient,Other,Revenue,0110 - 0119 - Room and Board Private (one bed)
+0120,Inpatient,General,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0121,Inpatient,Medical/Surgical/GYN,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0123,Inpatient,Pediatric,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0124,Inpatient,Psychiatric,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0126,Inpatient,Detoxification,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0128,Inpatient,Rehabilitation,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0129,Inpatient,Other,Revenue,0120 - 0129 - Room and Board Semi-private (two beds)
+0130,Inpatient,General,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0131,Inpatient,Medical/Surgical/GYN,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0133,Inpatient,Pediatric,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0134,Inpatient,Psychiatric,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0136,Inpatient,Detoxification,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0138,Inpatient,Rehabilitation,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0139,Inpatient,Other,Revenue,0130 - 0139 - Room and Board (3 and 4 beds)
+0141,Inpatient,Medical/Surgical/GYN,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0143,Inpatient,Pediatric,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0144,Inpatient,Psychiatric,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0146,Inpatient,Detoxification,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0148,Inpatient,Rehabilitation,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0149,Inpatient,Other,Revenue,0140 - 0149 - Room and Board Deluxe Private
+0150,Inpatient,General,Revenue,0150 - 0159 - Room and Board Ward
+0151,Inpatient,Medical/Surgical/GYN,Revenue,0150 - 0159 - Room and Board Ward
+0153,Inpatient,Pediatric,Revenue,0150 - 0159 - Room and Board Ward
+0154,Inpatient,Psychiatric,Revenue,0150 - 0159 - Room and Board Ward
+0156,Inpatient,Detoxification,Revenue,0150 - 0159 - Room and Board Ward
+0158,Inpatient,Rehabilitation,Revenue,0150 - 0159 - Room and Board Ward
+0159,Inpatient,Other,Revenue,0150 - 0159 - Room and Board Ward
+0160,Inpatient,General,Revenue,0160 - 0169 - Other Room and Board
+0161,Inpatient,"Hospital at home, R&B/hospital at home (effective for claims received on or after July 1, 2022)",Revenue,0160 - 0169 - Other Room and Board
+0164,Inpatient,Sterile,Revenue,0160 - 0169 - Other Room and Board
+0167,Inpatient,Self-care,Revenue,0160 - 0169 - Other Room and Board
+0169,Inpatient,Other,Revenue,0160 - 0169 - Other Room and Board
+0180,Inpatient,General,Revenue,0180 - 0189 - Leave of Absence
+0182,Inpatient,Patience convenience - charges billable,Revenue,0180 - 0189 - Leave of Absence
+0183,Inpatient,Therapeutic leave,Revenue,0180 - 0189 - Leave of Absence
+0189,Inpatient,Other,Revenue,0180 - 0189 - Leave of Absence
+0200,Inpatient,General,Revenue,0200 - 0209 - Intensive Care Unit
+0201,Inpatient,Surgical,Revenue,0200 - 0209 - Intensive Care Unit
+0202,Inpatient,Medical,Revenue,0200 - 0209 - Intensive Care Unit
+0203,Inpatient,Pediatric,Revenue,0200 - 0209 - Intensive Care Unit
+0204,Inpatient,Psychiatric,Revenue,0200 - 0209 - Intensive Care Unit
+0206,Inpatient,Intermediate ICU,Revenue,0200 - 0209 - Intensive Care Unit
+0207,Inpatient,Burn Care,Revenue,0200 - 0209 - Intensive Care Unit
+0208,Inpatient,Trauma,Revenue,0200 - 0209 - Intensive Care Unit
+0209,Inpatient,Other,Revenue,0200 - 0209 - Intensive Care Unit
+1001,Residential,Behavioral Health Accommodations - Residential Treatment - Psychiatric,Revenue,1000 - 1006 - Behavioral Health Accommodations
+1002,Residential,Behavioral Health Accommodations - Residential Treatment - Chemical Dependency,Revenue,1000 - 1006 - Behavioral Health Accommodations

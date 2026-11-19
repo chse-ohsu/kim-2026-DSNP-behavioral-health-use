@@ -1,0 +1,961 @@
+code,code_description,cat,cat_description,any_mh,smi,mild_mod_mh
+F200,Paranoid schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F201,Disorganized schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F202,Catatonic schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F203,Undifferentiated schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F205,Residual schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F2081,Schizophreniform disorder,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F2089,Other schizophrenia,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F209,"Schizophrenia, unspecified",MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F21,Schizotypal disorder,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F22,Delusional disorders,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F23,Brief psychotic disorder,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F24,Shared psychotic disorder,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F250,"Schizoaffective disorder, bipolar type",MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F251,"Schizoaffective disorder, depressive type",MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F258,Other schizoaffective disorders,MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F259,"Schizoaffective disorder, unspecified",MBD001,Schizophrenia spectrum and other psychotic disorders,1,1,0
+F28,Other psychotic disorder not due to a substance or known physiological condition,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F29,Unspecified psychosis not due to a substance or known physiological condition,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F53,Puerperal psychosis,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F531,Puerperal psychosis,MBD001,Schizophrenia spectrum and other psychotic disorders,1,0,1
+F320,"Major depressive disorder, single episode, mild",MBD002,Depressive disorders,1,0,1
+F321,"Major depressive disorder, single episode, moderate",MBD002,Depressive disorders,1,0,1
+F322,"Major depressive disorder, single episode, severe without psychotic features",MBD002,Depressive disorders,1,1,0
+F323,"Major depressive disorder, single episode, severe with psychotic features",MBD002,Depressive disorders,1,1,0
+F324,"Major depressive disorder, single episode, in partial remission",MBD002,Depressive disorders,1,0,1
+F328,Other depressive episodes,MBD002,Depressive disorders,1,0,1
+F3281,Premenstrual dysphoric disorder,MBD002,Depressive disorders,1,0,1
+F3289,Other specified depressive episodes,MBD002,Depressive disorders,1,0,1
+F329,"Major depressive disorder, single episode, unspecified",MBD002,Depressive disorders,1,0,1
+F32A,"Depression, unspecified",MBD002,Depressive disorders,1,0,1
+F330,"Major depressive disorder, recurrent, mild",MBD002,Depressive disorders,1,0,1
+F331,"Major depressive disorder, recurrent, moderate",MBD002,Depressive disorders,1,0,1
+F332,"Major depressive disorder, recurrent severe without psychotic features",MBD002,Depressive disorders,1,1,0
+F333,"Major depressive disorder, recurrent, severe with psychotic symptoms",MBD002,Depressive disorders,1,1,0
+F3341,"Major depressive disorder, recurrent, in partial remission",MBD002,Depressive disorders,1,0,1
+F338,Other recurrent depressive disorders,MBD002,Depressive disorders,1,0,1
+F339,"Major depressive disorder, recurrent, unspecified",MBD002,Depressive disorders,1,0,1
+F341,Dysthymic disorder,MBD002,Depressive disorders,1,0,1
+F530,Postpartum depression,MBD002,Depressive disorders,1,0,1
+O906,Postpartum mood disturbance,MBD002,Depressive disorders,1,0,1
+F3010,"Manic episode without psychotic symptoms, unspecified",MBD003,Bipolar and related disorders,1,1,0
+F3011,"Manic episode without psychotic symptoms, mild",MBD003,Bipolar and related disorders,1,1,0
+F3012,"Manic episode without psychotic symptoms, moderate",MBD003,Bipolar and related disorders,1,1,0
+F3013,"Manic episode, severe, without psychotic symptoms",MBD003,Bipolar and related disorders,1,1,0
+F302,"Manic episode, severe with psychotic symptoms",MBD003,Bipolar and related disorders,1,1,0
+F303,Manic episode in partial remission,MBD003,Bipolar and related disorders,1,1,0
+F308,Other manic episodes,MBD003,Bipolar and related disorders,1,1,0
+F309,"Manic episode, unspecified",MBD003,Bipolar and related disorders,1,1,0
+F310,"Bipolar disorder, current episode hypomanic",MBD003,Bipolar and related disorders,1,1,0
+F3110,"Bipolar disorder, current episode manic without psychotic features, unspecified",MBD003,Bipolar and related disorders,1,1,0
+F3111,"Bipolar disorder, current episode manic without psychotic features, mild",MBD003,Bipolar and related disorders,1,1,0
+F3112,"Bipolar disorder, current episode manic without psychotic features, moderate",MBD003,Bipolar and related disorders,1,1,0
+F3113,"Bipolar disorder, current episode manic without psychotic features, severe",MBD003,Bipolar and related disorders,1,1,0
+F312,"Bipolar disorder, current episode manic severe with psychotic features",MBD003,Bipolar and related disorders,1,1,0
+F3130,"Bipolar disorder, current episode depressed, mild or moderate severity, unspecified",MBD003,Bipolar and related disorders,1,1,0
+F3131,"Bipolar disorder, current episode depressed, mild",MBD003,Bipolar and related disorders,1,1,0
+F3132,"Bipolar disorder, current episode depressed, moderate",MBD003,Bipolar and related disorders,1,1,0
+F314,"Bipolar disorder, current episode depressed, severe, without psychotic features",MBD003,Bipolar and related disorders,1,1,0
+F315,"Bipolar disorder, current episode depressed, severe, with psychotic features",MBD003,Bipolar and related disorders,1,1,0
+F3160,"Bipolar disorder, current episode mixed, unspecified",MBD003,Bipolar and related disorders,1,1,0
+F3161,"Bipolar disorder, current episode mixed, mild",MBD003,Bipolar and related disorders,1,1,0
+F3162,"Bipolar disorder, current episode mixed, moderate",MBD003,Bipolar and related disorders,1,1,0
+F3163,"Bipolar disorder, current episode mixed, severe, without psychotic features",MBD003,Bipolar and related disorders,1,1,0
+F3164,"Bipolar disorder, current episode mixed, severe, with psychotic features",MBD003,Bipolar and related disorders,1,1,0
+F3171,"Bipolar disorder, in partial remission, most recent episode hypomanic",MBD003,Bipolar and related disorders,1,1,0
+F3173,"Bipolar disorder, in partial remission, most recent episode manic",MBD003,Bipolar and related disorders,1,1,0
+F3175,"Bipolar disorder, in partial remission, most recent episode depressed",MBD003,Bipolar and related disorders,1,1,0
+F3177,"Bipolar disorder, in partial remission, most recent episode mixed",MBD003,Bipolar and related disorders,1,1,0
+F3181,Bipolar II disorder,MBD003,Bipolar and related disorders,1,0,1
+F3189,Other bipolar disorder,MBD003,Bipolar and related disorders,1,0,1
+F319,"Bipolar disorder, unspecified",MBD003,Bipolar and related disorders,1,0,1
+F340,Cyclothymic disorder,MBD003,Bipolar and related disorders,1,0,1
+F348,Other persistent mood [affective] disorders,MBD004,Other specified and unspecified mood disorders,1,0,1
+F3481,Disruptive mood dysregulation disorder,MBD004,Other specified and unspecified mood disorders,1,0,1
+F3489,Other specified persistent mood disorders,MBD004,Other specified and unspecified mood disorders,1,0,1
+F349,"Persistent mood [affective] disorder, unspecified",MBD004,Other specified and unspecified mood disorders,1,0,1
+F39,Unspecified mood [affective] disorder,MBD004,Other specified and unspecified mood disorders,1,0,1
+F4000,"Agoraphobia, unspecified",MBD005,Anxiety and fear-related disorders,1,0,1
+F4001,Agoraphobia with panic disorder,MBD005,Anxiety and fear-related disorders,1,0,1
+F4002,Agoraphobia without panic disorder,MBD005,Anxiety and fear-related disorders,1,0,1
+F4010,"Social phobia, unspecified",MBD005,Anxiety and fear-related disorders,1,0,1
+F4011,"Social phobia, generalized",MBD005,Anxiety and fear-related disorders,1,0,1
+F40210,Arachnophobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40218,Other animal type phobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40220,Fear of thunderstorms,MBD005,Anxiety and fear-related disorders,1,0,1
+F40228,Other natural environment type phobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40230,Fear of blood,MBD005,Anxiety and fear-related disorders,1,0,1
+F40231,Fear of injections and transfusions,MBD005,Anxiety and fear-related disorders,1,0,1
+F40232,Fear of other medical care,MBD005,Anxiety and fear-related disorders,1,0,1
+F40233,Fear of injury,MBD005,Anxiety and fear-related disorders,1,0,1
+F40240,Claustrophobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40241,Acrophobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40242,Fear of bridges,MBD005,Anxiety and fear-related disorders,1,0,1
+F40243,Fear of flying,MBD005,Anxiety and fear-related disorders,1,0,1
+F40248,Other situational type phobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40290,Androphobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40291,Gynephobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F40298,Other specified phobia,MBD005,Anxiety and fear-related disorders,1,0,1
+F408,Other phobic anxiety disorders,MBD005,Anxiety and fear-related disorders,1,0,1
+F409,"Phobic anxiety disorder, unspecified",MBD005,Anxiety and fear-related disorders,1,0,1
+F410,Panic disorder [episodic paroxysmal anxiety],MBD005,Anxiety and fear-related disorders,1,0,1
+F411,Generalized anxiety disorder,MBD005,Anxiety and fear-related disorders,1,0,1
+F413,Other mixed anxiety disorders,MBD005,Anxiety and fear-related disorders,1,0,1
+F418,Other specified anxiety disorders,MBD005,Anxiety and fear-related disorders,1,0,1
+F419,"Anxiety disorder, unspecified",MBD005,Anxiety and fear-related disorders,1,0,1
+F940,Selective mutism,MBD005,Anxiety and fear-related disorders,1,0,1
+F42,Obsessive-compulsive disorder,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F422,Mixed obsessional thoughts and acts,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F423,Hoarding disorder,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F424,Excoriation (skin-picking) disorder,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F428,Other obsessive-compulsive disorder,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F429,"Obsessive-compulsive disorder, unspecified",MBD006,Obsessive-compulsive and related disorders,1,0,1
+F4522,Body dysmorphic disorder,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F633,Trichotillomania,MBD006,Obsessive-compulsive and related disorders,1,0,1
+F430,Acute stress reaction,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4310,"Post-traumatic stress disorder, unspecified",MBD007,Trauma- and stressor-related disorders,1,0,1
+F4311,"Post-traumatic stress disorder, acute",MBD007,Trauma- and stressor-related disorders,1,0,1
+F4312,"Post-traumatic stress disorder, chronic",MBD007,Trauma- and stressor-related disorders,1,0,1
+F4320,"Adjustment disorder, unspecified",MBD007,Trauma- and stressor-related disorders,1,0,1
+F4321,Adjustment disorder with depressed mood,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4322,Adjustment disorder with anxiety,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4323,Adjustment disorder with mixed anxiety and depressed mood,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4324,Adjustment disorder with disturbance of conduct,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4325,Adjustment disorder with mixed disturbance of emotions and conduct,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4329,Adjustment disorder with other symptoms,MBD007,Trauma- and stressor-related disorders,1,0,1
+F438,Other reactions to severe stress,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4381,Prolonged grief disorder,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4389,Other reactions to severe stress,MBD007,Trauma- and stressor-related disorders,1,0,1
+F439,"Reaction to severe stress, unspecified",MBD007,Trauma- and stressor-related disorders,1,0,1
+F440,Dissociative amnesia,MBD007,Trauma- and stressor-related disorders,1,0,1
+F441,Dissociative fugue,MBD007,Trauma- and stressor-related disorders,1,0,1
+F442,Dissociative stupor,MBD007,Trauma- and stressor-related disorders,1,0,1
+F444,Conversion disorder with motor symptom or deficit,MBD007,Trauma- and stressor-related disorders,1,0,1
+F445,Conversion disorder with seizures or convulsions,MBD007,Trauma- and stressor-related disorders,1,0,1
+F446,Conversion disorder with sensory symptom or deficit,MBD007,Trauma- and stressor-related disorders,1,0,1
+F447,Conversion disorder with mixed symptom presentation,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4481,Dissociative identity disorder,MBD007,Trauma- and stressor-related disorders,1,0,1
+F4489,Other dissociative and conversion disorders,MBD007,Trauma- and stressor-related disorders,1,0,1
+F449,"Dissociative and conversion disorder, unspecified",MBD007,Trauma- and stressor-related disorders,1,0,1
+F481,Depersonalization-derealization syndrome,MBD007,Trauma- and stressor-related disorders,1,0,1
+F602,Antisocial personality disorder,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F631,Pyromania,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F632,Kleptomania,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F6381,Intermittent explosive disorder,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F6389,Other impulse disorders,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F639,"Impulse disorder, unspecified",MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F910,Conduct disorder confined to family context,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F911,"Conduct disorder, childhood-onset type",MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F912,"Conduct disorder, adolescent-onset type",MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F913,Oppositional defiant disorder,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F918,Other conduct disorders,MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F919,"Conduct disorder, unspecified",MBD008,"Disruptive, impulse-control and conduct disorders",1,0,1
+F21,Schizotypal disorder,MBD009,Personality disorders,1,0,1
+F600,Paranoid personality disorder,MBD009,Personality disorders,1,0,1
+F601,Schizoid personality disorder,MBD009,Personality disorders,1,0,1
+F602,Antisocial personality disorder,MBD009,Personality disorders,1,0,1
+F603,Borderline personality disorder,MBD009,Personality disorders,1,0,1
+F604,Histrionic personality disorder,MBD009,Personality disorders,1,0,1
+F605,Obsessive-compulsive personality disorder,MBD009,Personality disorders,1,0,1
+F606,Avoidant personality disorder,MBD009,Personality disorders,1,0,1
+F607,Dependent personality disorder,MBD009,Personality disorders,1,0,1
+F6081,Narcissistic personality disorder,MBD009,Personality disorders,1,0,1
+F6089,Other specific personality disorders,MBD009,Personality disorders,1,0,1
+F609,"Personality disorder, unspecified",MBD009,Personality disorders,1,0,1
+F688,Other specified disorders of adult personality and behavior,MBD009,Personality disorders,1,0,1
+F69,Unspecified disorder of adult personality and behavior,MBD009,Personality disorders,1,0,1
+F5000,"Anorexia nervosa, unspecified",MBD010,Feeding and eating disorders,1,0,1
+F5001,"Anorexia nervosa, restricting type",MBD010,Feeding and eating disorders,1,0,1
+F5002,"Anorexia nervosa, binge eating/purging type",MBD010,Feeding and eating disorders,1,0,1
+F502,Bulimia nervosa,MBD010,Feeding and eating disorders,1,0,1
+F508,Other eating disorders,MBD010,Feeding and eating disorders,1,0,1
+F5081,Binge eating disorder,MBD010,Feeding and eating disorders,1,0,1
+F5082,Avoidant/restrictive food intake disorder,MBD010,Feeding and eating disorders,1,0,1
+F5089,Other specified eating disorder,MBD010,Feeding and eating disorders,1,0,1
+F509,"Eating disorder, unspecified",MBD010,Feeding and eating disorders,1,0,1
+F450,Somatization disorder,MBD011,Somatic disorders,1,0,1
+F451,Undifferentiated somatoform disorder,MBD011,Somatic disorders,1,0,1
+F4520,"Hypochondriacal disorder, unspecified",MBD011,Somatic disorders,1,0,1
+F4521,Hypochondriasis,MBD011,Somatic disorders,1,0,1
+F4529,Other hypochondriacal disorders,MBD011,Somatic disorders,1,0,1
+F4541,Pain disorder exclusively related to psychological factors,MBD011,Somatic disorders,1,0,1
+F4542,Pain disorder with related psychological factors,MBD011,Somatic disorders,1,0,1
+F458,Other somatoform disorders,MBD011,Somatic disorders,1,0,1
+F459,"Somatoform disorder, unspecified",MBD011,Somatic disorders,1,0,1
+F6810,"Factitious disorder imposed on self, unspecified",MBD011,Somatic disorders,1,0,1
+F6811,"Factitious disorder imposed on self, with predominantly psychological signs and symptoms",MBD011,Somatic disorders,1,0,1
+F6812,"Factitious disorder imposed on self, with predominantly physical signs and symptoms",MBD011,Somatic disorders,1,0,1
+F6813,"Factitious disorder imposed on self, with combined psychological and physical signs and symptoms",MBD011,Somatic disorders,1,0,1
+F68A,Factitious disorder imposed on another,MBD011,Somatic disorders,1,0,1
+R45851,Suicidal ideations,MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+R4588,Nonsuicidal self-harm,MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T1491,Suicide attempt,MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T1491XA,"Suicide attempt, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T360X2A,"Poisoning by penicillins, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T361X2A,"Poisoning by cephalosporins and other beta-lactam antibiotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T362X2A,"Poisoning by chloramphenicol group, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T363X2A,"Poisoning by macrolides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T364X2A,"Poisoning by tetracyclines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T365X2A,"Poisoning by aminoglycosides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T366X2A,"Poisoning by rifampicins, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T367X2A,"Poisoning by antifungal antibiotics, systemically used, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T368X2A,"Poisoning by other systemic antibiotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T3692XA,"Poisoning by unspecified systemic antibiotic, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T370X2A,"Poisoning by sulfonamides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T371X2A,"Poisoning by antimycobacterial drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T372X2A,"Poisoning by antimalarials and drugs acting on other blood protozoa, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T373X2A,"Poisoning by other antiprotozoal drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T374X2A,"Poisoning by anthelminthics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T375X2A,"Poisoning by antiviral drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T378X2A,"Poisoning by other specified systemic anti-infectives and antiparasitics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T3792XA,"Poisoning by unspecified systemic anti-infective and antiparasitics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T380X2A,"Poisoning by glucocorticoids and synthetic analogues, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T381X2A,"Poisoning by thyroid hormones and substitutes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T382X2A,"Poisoning by antithyroid drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T383X2A,"Poisoning by insulin and oral hypoglycemic [antidiabetic] drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T384X2A,"Poisoning by oral contraceptives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T385X2A,"Poisoning by other estrogens and progestogens, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T386X2A,"Poisoning by antigonadotrophins, antiestrogens, antiandrogens, not elsewhere classified, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T387X2A,"Poisoning by androgens and anabolic congeners, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T38802A,"Poisoning by unspecified hormones and synthetic substitutes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T38892A,"Poisoning by other hormones and synthetic substitutes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T38902A,"Poisoning by unspecified hormone antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T38992A,"Poisoning by other hormone antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T39012A,"Poisoning by aspirin, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T39092A,"Poisoning by salicylates, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T391X2A,"Poisoning by 4-Aminophenol derivatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T392X2A,"Poisoning by pyrazolone derivatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T39312A,"Poisoning by propionic acid derivatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T39392A,"Poisoning by other nonsteroidal anti-inflammatory drugs [NSAID], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T394X2A,"Poisoning by antirheumatics, not elsewhere classified, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T398X2A,"Poisoning by other nonopioid analgesics and antipyretics, not elsewhere classified, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T3992XA,"Poisoning by unspecified nonopioid analgesic, antipyretic and antirheumatic, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T400X2A,"Poisoning by opium, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T401X2A,"Poisoning by heroin, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T402X2A,"Poisoning by other opioids, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T403X2A,"Poisoning by methadone, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40412A,"Poisoning by fentanyl or fentanyl analogs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40422A,"Poisoning by tramadol, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40492A,"Poisoning by other synthetic narcotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T404X2A,"Poisoning by other synthetic narcotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T405X2A,"Poisoning by cocaine, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40602A,"Poisoning by unspecified narcotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40692A,"Poisoning by other narcotics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40712A,"Poisoning by cannabis, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40722A,"Poisoning by synthetic cannabinoids, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T407X2A,"Poisoning by cannabis (derivatives), intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T408X2A,"Poisoning by lysergide [LSD], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40902A,"Poisoning by unspecified psychodysleptics [hallucinogens], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T40992A,"Poisoning by other psychodysleptics [hallucinogens], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T410X2A,"Poisoning by inhaled anesthetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T411X2A,"Poisoning by intravenous anesthetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T41202A,"Poisoning by unspecified general anesthetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T41292A,"Poisoning by other general anesthetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T413X2A,"Poisoning by local anesthetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4142XA,"Poisoning by unspecified anesthetic, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T415X2A,"Poisoning by therapeutic gases, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T420X2A,"Poisoning by hydantoin derivatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T421X2A,"Poisoning by iminostilbenes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T422X2A,"Poisoning by succinimides and oxazolidinediones, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T423X2A,"Poisoning by barbiturates, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T424X2A,"Poisoning by benzodiazepines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T425X2A,"Poisoning by mixed antiepileptics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T426X2A,"Poisoning by other antiepileptic and sedative-hypnotic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4272XA,"Poisoning by unspecified antiepileptic and sedative-hypnotic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T428X2A,"Poisoning by antiparkinsonism drugs and other central muscle-tone depressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43012A,"Poisoning by tricyclic antidepressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43022A,"Poisoning by tetracyclic antidepressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T431X2A,"Poisoning by monoamine-oxidase-inhibitor antidepressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43202A,"Poisoning by unspecified antidepressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43212A,"Poisoning by selective serotonin and norepinephrine reuptake inhibitors, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43222A,"Poisoning by selective serotonin reuptake inhibitors, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43292A,"Poisoning by other antidepressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T433X2A,"Poisoning by phenothiazine antipsychotics and neuroleptics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T434X2A,"Poisoning by butyrophenone and thiothixene neuroleptics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43502A,"Poisoning by unspecified antipsychotics and neuroleptics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43592A,"Poisoning by other antipsychotics and neuroleptics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43602A,"Poisoning by unspecified psychostimulants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43612A,"Poisoning by caffeine, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43622A,"Poisoning by amphetamines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43632A,"Poisoning by methylphenidate, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43642A,"Poisoning by ecstasy, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43652A,"Poisoning by methamphetamines intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T43692A,"Poisoning by other psychostimulants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T438X2A,"Poisoning by other psychotropic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4392XA,"Poisoning by unspecified psychotropic drug, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T440X2A,"Poisoning by anticholinesterase agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T441X2A,"Poisoning by other parasympathomimetics [cholinergics], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T442X2A,"Poisoning by ganglionic blocking drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T443X2A,"Poisoning by other parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T444X2A,"Poisoning by predominantly alpha-adrenoreceptor agonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T445X2A,"Poisoning by predominantly beta-adrenoreceptor agonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T446X2A,"Poisoning by alpha-adrenoreceptor antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T447X2A,"Poisoning by beta-adrenoreceptor antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T448X2A,"Poisoning by centrally-acting and adrenergic-neuron-blocking agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T44902A,"Poisoning by unspecified drugs primarily affecting the autonomic nervous system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T44992A,"Poisoning by other drug primarily affecting the autonomic nervous system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T450X2A,"Poisoning by antiallergic and antiemetic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T451X2A,"Poisoning by antineoplastic and immunosuppressive drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T452X2A,"Poisoning by vitamins, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T453X2A,"Poisoning by enzymes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T454X2A,"Poisoning by iron and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45512A,"Poisoning by anticoagulants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45522A,"Poisoning by antithrombotic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45602A,"Poisoning by unspecified fibrinolysis-affecting drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45612A,"Poisoning by thrombolytic drug, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45622A,"Poisoning by hemostatic drug, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T45692A,"Poisoning by other fibrinolysis-affecting drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T457X2A,"Poisoning by anticoagulant antagonists, vitamin K and other coagulants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T458X2A,"Poisoning by other primarily systemic and hematological agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4592XA,"Poisoning by unspecified primarily systemic and hematological agent, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T460X2A,"Poisoning by cardiac-stimulant glycosides and drugs of similar action, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T461X2A,"Poisoning by calcium-channel blockers, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T462X2A,"Poisoning by other antidysrhythmic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T463X2A,"Poisoning by coronary vasodilators, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T464X2A,"Poisoning by angiotensin-converting-enzyme inhibitors, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T465X2A,"Poisoning by other antihypertensive drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T466X2A,"Poisoning by antihyperlipidemic and antiarteriosclerotic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T467X2A,"Poisoning by peripheral vasodilators, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T468X2A,"Poisoning by antivaricose drugs, including sclerosing agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T46902A,"Poisoning by unspecified agents primarily affecting the cardiovascular system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T46992A,"Poisoning by other agents primarily affecting the cardiovascular system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T470X2A,"Poisoning by histamine H2-receptor blockers, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T471X2A,"Poisoning by other antacids and anti-gastric-secretion drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T472X2A,"Poisoning by stimulant laxatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T473X2A,"Poisoning by saline and osmotic laxatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T474X2A,"Poisoning by other laxatives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T475X2A,"Poisoning by digestants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T476X2A,"Poisoning by antidiarrheal drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T477X2A,"Poisoning by emetics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T478X2A,"Poisoning by other agents primarily affecting gastrointestinal system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4792XA,"Poisoning by unspecified agents primarily affecting the gastrointestinal system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T480X2A,"Poisoning by oxytocic drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T481X2A,"Poisoning by skeletal muscle relaxants [neuromuscular blocking agents], intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T48202A,"Poisoning by unspecified drugs acting on muscles, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T48292A,"Poisoning by other drugs acting on muscles, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T483X2A,"Poisoning by antitussives, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T484X2A,"Poisoning by expectorants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T485X2A,"Poisoning by other anti-common-cold drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T486X2A,"Poisoning by antiasthmatics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T48902A,"Poisoning by unspecified agents primarily acting on the respiratory system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T48992A,"Poisoning by other agents primarily acting on the respiratory system, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T490X2A,"Poisoning by local antifungal, anti-infective and anti-inflammatory drugs, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T491X2A,"Poisoning by antipruritics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T492X2A,"Poisoning by local astringents and local detergents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T493X2A,"Poisoning by emollients, demulcents and protectants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T494X2A,"Poisoning by keratolytics, keratoplastics, and other hair treatment drugs and preparations, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T495X2A,"Poisoning by ophthalmological drugs and preparations, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T496X2A,"Poisoning by otorhinolaryngological drugs and preparations, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T497X2A,"Poisoning by dental drugs, topically applied, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T498X2A,"Poisoning by other topical agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T4992XA,"Poisoning by unspecified topical agent, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T500X2A,"Poisoning by mineralocorticoids and their antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T501X2A,"Poisoning by loop [high-ceiling] diuretics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T502X2A,"Poisoning by carbonic-anhydrase inhibitors, benzothiadiazides and other diuretics, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T503X2A,"Poisoning by electrolytic, caloric and water-balance agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T504X2A,"Poisoning by drugs affecting uric acid metabolism, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T505X2A,"Poisoning by appetite depressants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T506X2A,"Poisoning by antidotes and chelating agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T507X2A,"Poisoning by analeptics and opioid receptor antagonists, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T508X2A,"Poisoning by diagnostic agents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50902A,"Poisoning by unspecified drugs, medicaments and biological substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50912A,"Poisoning by multiple unspecified drugs, medicaments and biological substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50992A,"Poisoning by other drugs, medicaments and biological substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50A12A,"Poisoning by pertussis vaccine, including combinations with a pertussis component, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50A22A,"Poisoning by mixed bacterial vaccines without a pertussis component, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50A92A,"Poisoning by other bacterial vaccines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50B12A,"Poisoning by smallpox vaccines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50B92A,"Poisoning by other viral vaccines, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50Z12A,"Poisoning by immunoglobulin, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T50Z92A,"Poisoning by other vaccines and biological substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T510X2A,"Toxic effect of ethanol, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T511X2A,"Toxic effect of methanol, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T512X2A,"Toxic effect of 2-Propanol, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T513X2A,"Toxic effect of fusel oil, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T518X2A,"Toxic effect of other alcohols, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5192XA,"Toxic effect of unspecified alcohol, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T520X2A,"Toxic effect of petroleum products, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T521X2A,"Toxic effect of benzene, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T522X2A,"Toxic effect of homologues of benzene, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T523X2A,"Toxic effect of glycols, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T524X2A,"Toxic effect of ketones, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T528X2A,"Toxic effect of other organic solvents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5292XA,"Toxic effect of unspecified organic solvent, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T530X2A,"Toxic effect of carbon tetrachloride, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T531X2A,"Toxic effect of chloroform, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T532X2A,"Toxic effect of trichloroethylene, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T533X2A,"Toxic effect of tetrachloroethylene, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T534X2A,"Toxic effect of dichloromethane, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T535X2A,"Toxic effect of chlorofluorocarbons, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T536X2A,"Toxic effect of other halogen derivatives of aliphatic hydrocarbons, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T537X2A,"Toxic effect of other halogen derivatives of aromatic hydrocarbons, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5392XA,"Toxic effect of unspecified halogen derivatives of aliphatic and aromatic hydrocarbons, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T540X2A,"Toxic effect of phenol and phenol homologues, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T541X2A,"Toxic effect of other corrosive organic compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T542X2A,"Toxic effect of corrosive acids and acid-like substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T543X2A,"Toxic effect of corrosive alkalis and alkali-like substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5492XA,"Toxic effect of unspecified corrosive substance, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T550X2A,"Toxic effect of soaps, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T551X2A,"Toxic effect of detergents, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T560X2A,"Toxic effect of lead and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T561X2A,"Toxic effect of mercury and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T562X2A,"Toxic effect of chromium and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T563X2A,"Toxic effect of cadmium and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T564X2A,"Toxic effect of copper and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T565X2A,"Toxic effect of zinc and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T566X2A,"Toxic effect of tin and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T567X2A,"Toxic effect of beryllium and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T56812A,"Toxic effect of thallium, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T56892A,"Toxic effect of other metals, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5692XA,"Toxic effect of unspecified metal, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T570X2A,"Toxic effect of arsenic and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T571X2A,"Toxic effect of phosphorus and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T572X2A,"Toxic effect of manganese and its compounds, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T573X2A,"Toxic effect of hydrogen cyanide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T578X2A,"Toxic effect of other specified inorganic substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5792XA,"Toxic effect of unspecified inorganic substance, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5802XA,"Toxic effect of carbon monoxide from motor vehicle exhaust, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5812XA,"Toxic effect of carbon monoxide from utility gas, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T582X2A,"Toxic effect of carbon monoxide from incomplete combustion of other domestic fuels, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T588X2A,"Toxic effect of carbon monoxide from other source, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5892XA,"Toxic effect of carbon monoxide from unspecified source, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T590X2A,"Toxic effect of nitrogen oxides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T591X2A,"Toxic effect of sulfur dioxide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T592X2A,"Toxic effect of formaldehyde, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T593X2A,"Toxic effect of lacrimogenic gas, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T594X2A,"Toxic effect of chlorine gas, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T595X2A,"Toxic effect of fluorine gas and hydrogen fluoride, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T596X2A,"Toxic effect of hydrogen sulfide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T597X2A,"Toxic effect of carbon dioxide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T59812A,"Toxic effect of smoke, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T59892A,"Toxic effect of other specified gases, fumes and vapors, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T5992XA,"Toxic effect of unspecified gases, fumes and vapors, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T600X2A,"Toxic effect of organophosphate and carbamate insecticides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T601X2A,"Toxic effect of halogenated insecticides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T602X2A,"Toxic effect of other insecticides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T603X2A,"Toxic effect of herbicides and fungicides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T604X2A,"Toxic effect of rodenticides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T608X2A,"Toxic effect of other pesticides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6092XA,"Toxic effect of unspecified pesticide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6102XA,"Ciguatera fish poisoning, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6112XA,"Scombroid fish poisoning, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T61772A,"Other fish poisoning, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T61782A,"Other shellfish poisoning, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T618X2A,"Toxic effect of other seafood, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6192XA,"Toxic effect of unspecified seafood, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T620X2A,"Toxic effect of ingested mushrooms, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T621X2A,"Toxic effect of ingested berries, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T622X2A,"Toxic effect of other ingested (parts of) plant(s), intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T628X2A,"Toxic effect of other specified noxious substances eaten as food, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6292XA,"Toxic effect of unspecified noxious substance eaten as food, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63002A,"Toxic effect of unspecified snake venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63012A,"Toxic effect of rattlesnake venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63022A,"Toxic effect of coral snake venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63032A,"Toxic effect of taipan venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63042A,"Toxic effect of cobra venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63062A,"Toxic effect of venom of other North and South American snake, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63072A,"Toxic effect of venom of other Australian snake, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63082A,"Toxic effect of venom of other African and Asian snake, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63092A,"Toxic effect of venom of other snake, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63112A,"Toxic effect of venom of gila monster, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63122A,"Toxic effect of venom of other venomous lizard, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63192A,"Toxic effect of venom of other reptiles, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T632X2A,"Toxic effect of venom of scorpion, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63302A,"Toxic effect of unspecified spider venom, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63312A,"Toxic effect of venom of black widow spider, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63322A,"Toxic effect of venom of tarantula, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63332A,"Toxic effect of venom of brown recluse spider, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63392A,"Toxic effect of venom of other spider, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63412A,"Toxic effect of venom of centipedes and venomous millipedes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63422A,"Toxic effect of venom of ants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63432A,"Toxic effect of venom of caterpillars, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63442A,"Toxic effect of venom of bees, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63452A,"Toxic effect of venom of hornets, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63462A,"Toxic effect of venom of wasps, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63482A,"Toxic effect of venom of other arthropod, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63512A,"Toxic effect of contact with stingray, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63592A,"Toxic effect of contact with other venomous fish, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63612A,"Toxic effect of contact with Portuguese Man-o-war, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63622A,"Toxic effect of contact with other jellyfish, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63632A,"Toxic effect of contact with sea anemone, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63692A,"Toxic effect of contact with other venomous marine animals, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63712A,"Toxic effect of contact with venomous marine plant, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63792A,"Toxic effect of contact with other venomous plant, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63812A,"Toxic effect of contact with venomous frog, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63822A,"Toxic effect of contact with venomous toad, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63832A,"Toxic effect of contact with other venomous amphibian, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T63892A,"Toxic effect of contact with other venomous animals, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6392XA,"Toxic effect of contact with unspecified venomous animal, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6402XA,"Toxic effect of aflatoxin, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6482XA,"Toxic effect of other mycotoxin food contaminants, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T650X2A,"Toxic effect of cyanides, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T651X2A,"Toxic effect of strychnine and its salts, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65212A,"Toxic effect of chewing tobacco, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65222A,"Toxic effect of tobacco cigarettes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65292A,"Toxic effect of other tobacco and nicotine, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T653X2A,"Toxic effect of nitroderivatives and aminoderivatives of benzene and its homologues, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T654X2A,"Toxic effect of carbon disulfide, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T655X2A,"Toxic effect of nitroglycerin and other nitric acids and esters, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T656X2A,"Toxic effect of paints and dyes, not elsewhere classified, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65812A,"Toxic effect of latex, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65822A,"Toxic effect of harmful algae and algae toxins, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65832A,"Toxic effect of fiberglass, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T65892A,"Toxic effect of other specified substances, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T6592XA,"Toxic effect of unspecified substance, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71112A,"Asphyxiation due to smothering under pillow, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71122A,"Asphyxiation due to plastic bag, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71132A,"Asphyxiation due to being trapped in bed linens, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71152A,"Asphyxiation due to smothering in furniture, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71162A,"Asphyxiation due to hanging, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71192A,"Asphyxiation due to mechanical threat to breathing due to other causes, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71222A,"Asphyxiation due to being trapped in a car trunk, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+T71232A,"Asphyxiation due to being trapped in a (discarded) refrigerator, intentional self-harm, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X710XXA,"Intentional self-harm by drowning and submersion while in bathtub, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X711XXA,"Intentional self-harm by drowning and submersion while in swimming pool, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X712XXA,"Intentional self-harm by drowning and submersion after jump into swimming pool, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X713XXA,"Intentional self-harm by drowning and submersion in natural water, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X718XXA,"Other intentional self-harm by drowning and submersion, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X719XXA,"Intentional self-harm by drowning and submersion, unspecified, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X72XXXA,"Intentional self-harm by handgun discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X730XXA,"Intentional self-harm by shotgun discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X731XXA,"Intentional self-harm by hunting rifle discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X732XXA,"Intentional self-harm by machine gun discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X738XXA,"Intentional self-harm by other larger firearm discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X739XXA,"Intentional self-harm by unspecified larger firearm discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X7401XA,"Intentional self-harm by airgun, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X7402XA,"Intentional self-harm by paintball gun, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X7409XA,"Intentional self-harm by other gas, air or spring-operated gun, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X748XXA,"Intentional self-harm by other firearm discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X749XXA,"Intentional self-harm by unspecified firearm discharge, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X75XXXA,"Intentional self-harm by explosive material, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X76XXXA,"Intentional self-harm by smoke, fire and flames, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X770XXA,"Intentional self-harm by steam or hot vapors, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X771XXA,"Intentional self-harm by hot tap water, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X772XXA,"Intentional self-harm by other hot fluids, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X773XXA,"Intentional self-harm by hot household appliances, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X778XXA,"Intentional self-harm by other hot objects, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X779XXA,"Intentional self-harm by unspecified hot objects, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X780XXA,"Intentional self-harm by sharp glass, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X781XXA,"Intentional self-harm by knife, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X782XXA,"Intentional self-harm by sword or dagger, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X788XXA,"Intentional self-harm by other sharp object, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X789XXA,"Intentional self-harm by unspecified sharp object, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X79XXXA,"Intentional self-harm by blunt object, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X80XXXA,"Intentional self-harm by jumping from a high place, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X810XXA,"Intentional self-harm by jumping or lying in front of motor vehicle, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X811XXA,"Intentional self-harm by jumping or lying in front of (subway) train, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X818XXA,"Intentional self-harm by jumping or lying in front of other moving object, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X820XXA,"Intentional collision of motor vehicle with other motor vehicle, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X821XXA,"Intentional collision of motor vehicle with train, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X822XXA,"Intentional collision of motor vehicle with tree, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X828XXA,"Other intentional self-harm by crashing of motor vehicle, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X830XXA,"Intentional self-harm by crashing of aircraft, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X831XXA,"Intentional self-harm by electrocution, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X832XXA,"Intentional self-harm by exposure to extremes of cold, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+X838XXA,"Intentional self-harm by other specified means, initial encounter",MBD012,Suicidal ideation/attempt/intentional self-harm,1,0,1
+F488,Other specified nonpsychotic mental disorders,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F489,"Nonpsychotic mental disorder, unspecified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F520,Hypoactive sexual desire disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F521,Sexual aversion disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F5221,Male erectile disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F5222,Female sexual arousal disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F5231,Female orgasmic disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F5232,Male orgasmic disorder,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F524,Premature ejaculation,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F525,Vaginismus not due to a substance or known physiological condition,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F526,Dyspareunia not due to a substance or known physiological condition,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F528,Other sexual dysfunction not due to a substance or known physiological condition,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F529,Unspecified sexual dysfunction not due to a substance or known physiological condition,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F54,Psychological and behavioral factors associated with disorders or diseases classified elsewhere,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F630,Pathological gambling,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F640,Transsexualism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F641,Dual role transvestism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F648,Other gender identity disorders,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F649,"Gender identity disorder, unspecified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F650,Fetishism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F651,Transvestic fetishism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F652,Exhibitionism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F653,Voyeurism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F654,Pedophilia,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F6550,"Sadomasochism, unspecified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F6551,Sexual masochism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F6552,Sexual sadism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F6581,Frotteurism,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F6589,Other paraphilias,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F659,"Paraphilia, unspecified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F66,Other sexual disorders,MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F99,"Mental disorder, not otherwise specified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+R37,"Sexual dysfunction, unspecified",MBD013,Miscellaneous mental and behavioral disorders/conditions,1,0,1
+F840,Autistic disorder,MBD014,Neurodevelopmental disorders,1,0,1
+F845,Aspergers syndrome,MBD014,Neurodevelopmental disorders,1,0,1
+F900,"Attention-deficit hyperactivity disorder, predominantly inattentive type",MBD014,Neurodevelopmental disorders,1,0,1
+F901,"Attention-deficit hyperactivity disorder, predominantly hyperactive type",MBD014,Neurodevelopmental disorders,1,0,1
+F902,"Attention-deficit hyperactivity disorder, combined type",MBD014,Neurodevelopmental disorders,1,0,1
+F908,"Attention-deficit hyperactivity disorder, other type",MBD014,Neurodevelopmental disorders,1,0,1
+F909,"Attention-deficit hyperactivity disorder, unspecified type",MBD014,Neurodevelopmental disorders,1,0,1
+F950,Transient tic disorder,MBD014,Neurodevelopmental disorders,1,0,1
+F951,Chronic motor or vocal tic disorder,MBD014,Neurodevelopmental disorders,1,0,1
+F952,Tourettes disorder,MBD014,Neurodevelopmental disorders,1,0,1
+F958,Other tic disorders,MBD014,Neurodevelopmental disorders,1,0,1
+F959,"Tic disorder, unspecified",MBD014,Neurodevelopmental disorders,1,0,1
+T1491XD,"Suicide attempt, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T360X2D,"Poisoning by penicillins, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T361X2D,"Poisoning by cephalosporins and other beta-lactam antibiotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T362X2D,"Poisoning by chloramphenicol group, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T363X2D,"Poisoning by macrolides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T364X2D,"Poisoning by tetracyclines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T365X2D,"Poisoning by aminoglycosides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T366X2D,"Poisoning by rifampicins, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T367X2D,"Poisoning by antifungal antibiotics, systemically used, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T368X2D,"Poisoning by other systemic antibiotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T3692XD,"Poisoning by unspecified systemic antibiotic, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T370X2D,"Poisoning by sulfonamides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T371X2D,"Poisoning by antimycobacterial drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T372X2D,"Poisoning by antimalarials and drugs acting on other blood protozoa, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T373X2D,"Poisoning by other antiprotozoal drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T374X2D,"Poisoning by anthelminthics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T375X2D,"Poisoning by antiviral drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T378X2D,"Poisoning by other specified systemic anti-infectives and antiparasitics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T3792XD,"Poisoning by unspecified systemic anti-infective and antiparasitics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T380X2D,"Poisoning by glucocorticoids and synthetic analogues, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T381X2D,"Poisoning by thyroid hormones and substitutes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T382X2D,"Poisoning by antithyroid drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T383X2D,"Poisoning by insulin and oral hypoglycemic [antidiabetic] drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T384X2D,"Poisoning by oral contraceptives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T385X2D,"Poisoning by other estrogens and progestogens, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T386X2D,"Poisoning by antigonadotrophins, antiestrogens, antiandrogens, not elsewhere classified, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T387X2D,"Poisoning by androgens and anabolic congeners, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T38802D,"Poisoning by unspecified hormones and synthetic substitutes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T38892D,"Poisoning by other hormones and synthetic substitutes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T38902D,"Poisoning by unspecified hormone antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T38992D,"Poisoning by other hormone antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T39012D,"Poisoning by aspirin, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T39092D,"Poisoning by salicylates, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T391X2D,"Poisoning by 4-Aminophenol derivatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T392X2D,"Poisoning by pyrazolone derivatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T39312D,"Poisoning by propionic acid derivatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T39392D,"Poisoning by other nonsteroidal anti-inflammatory drugs [NSAID], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T394X2D,"Poisoning by antirheumatics, not elsewhere classified, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T398X2D,"Poisoning by other nonopioid analgesics and antipyretics, not elsewhere classified, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T3992XD,"Poisoning by unspecified nonopioid analgesic, antipyretic and antirheumatic, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T400X2D,"Poisoning by opium, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T401X2D,"Poisoning by heroin, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T402X2D,"Poisoning by other opioids, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T403X2D,"Poisoning by methadone, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40412D,"Poisoning by fentanyl or fentanyl analogs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40422D,"Poisoning by tramadol, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40492D,"Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T404X2D,"Poisoning by other synthetic narcotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T405X2D,"Poisoning by cocaine, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40602D,"Poisoning by unspecified narcotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40692D,"Poisoning by other narcotics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40712D,"Poisoning by cannabis, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40722D,"Poisoning by synthetic cannabinoids, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T407X2D,"Poisoning by cannabis (derivatives), intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T408X2D,"Poisoning by lysergide [LSD], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40902D,"Poisoning by unspecified psychodysleptics [hallucinogens], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T40992D,"Poisoning by other psychodysleptics [hallucinogens], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T410X2D,"Poisoning by inhaled anesthetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T411X2D,"Poisoning by intravenous anesthetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T41202D,"Poisoning by unspecified general anesthetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T41292D,"Poisoning by other general anesthetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T413X2D,"Poisoning by local anesthetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4142XD,"Poisoning by unspecified anesthetic, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T415X2D,"Poisoning by therapeutic gases, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T420X2D,"Poisoning by hydantoin derivatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T421X2D,"Poisoning by iminostilbenes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T422X2D,"Poisoning by succinimides and oxazolidinediones, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T423X2D,"Poisoning by barbiturates, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T424X2D,"Poisoning by benzodiazepines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T425X2D,"Poisoning by mixed antiepileptics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T426X2D,"Poisoning by other antiepileptic and sedative-hypnotic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4272XD,"Poisoning by unspecified antiepileptic and sedative-hypnotic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T428X2D,"Poisoning by antiparkinsonism drugs and other central muscle-tone depressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43012D,"Poisoning by tricyclic antidepressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43022D,"Poisoning by tetracyclic antidepressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T431X2D,"Poisoning by monoamine-oxidase-inhibitor antidepressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43202D,"Poisoning by unspecified antidepressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43212D,"Poisoning by selective serotonin and norepinephrine reuptake inhibitors, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43222D,"Poisoning by selective serotonin reuptake inhibitors, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43292D,"Poisoning by other antidepressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T433X2D,"Poisoning by phenothiazine antipsychotics and neuroleptics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T434X2D,"Poisoning by butyrophenone and thiothixene neuroleptics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43502D,"Poisoning by unspecified antipsychotics and neuroleptics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43592D,"Poisoning by other antipsychotics and neuroleptics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43602D,"Poisoning by unspecified psychostimulants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43612D,"Poisoning by caffeine, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43622D,"Poisoning by amphetamines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43632D,"Poisoning by methylphenidate, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43642D,"Poisoning by ecstasy, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43652D,"Poisoning by methamphetamines intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T43692D,"Poisoning by other psychostimulants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T438X2D,"Poisoning by other psychotropic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4392XD,"Poisoning by unspecified psychotropic drug, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T440X2D,"Poisoning by anticholinesterase agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T441X2D,"Poisoning by other parasympathomimetics [cholinergics], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T442X2D,"Poisoning by ganglionic blocking drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T443X2D,"Poisoning by other parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T444X2D,"Poisoning by predominantly alpha-adrenoreceptor agonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T445X2D,"Poisoning by predominantly beta-adrenoreceptor agonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T446X2D,"Poisoning by alpha-adrenoreceptor antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T447X2D,"Poisoning by beta-adrenoreceptor antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T448X2D,"Poisoning by centrally-acting and adrenergic-neuron-blocking agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T44902D,"Poisoning by unspecified drugs primarily affecting the autonomic nervous system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T44992D,"Poisoning by other drug primarily affecting the autonomic nervous system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T450X2D,"Poisoning by antiallergic and antiemetic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T451X2D,"Poisoning by antineoplastic and immunosuppressive drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T452X2D,"Poisoning by vitamins, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T453X2D,"Poisoning by enzymes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T454X2D,"Poisoning by iron and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45512D,"Poisoning by anticoagulants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45522D,"Poisoning by antithrombotic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45602D,"Poisoning by unspecified fibrinolysis-affecting drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45612D,"Poisoning by thrombolytic drug, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45622D,"Poisoning by hemostatic drug, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T45692D,"Poisoning by other fibrinolysis-affecting drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T457X2D,"Poisoning by anticoagulant antagonists, vitamin K and other coagulants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T458X2D,"Poisoning by other primarily systemic and hematological agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4592XD,"Poisoning by unspecified primarily systemic and hematological agent, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T460X2D,"Poisoning by cardiac-stimulant glycosides and drugs of similar action, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T461X2D,"Poisoning by calcium-channel blockers, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T462X2D,"Poisoning by other antidysrhythmic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T463X2D,"Poisoning by coronary vasodilators, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T464X2D,"Poisoning by angiotensin-converting-enzyme inhibitors, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T465X2D,"Poisoning by other antihypertensive drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T466X2D,"Poisoning by antihyperlipidemic and antiarteriosclerotic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T467X2D,"Poisoning by peripheral vasodilators, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T468X2D,"Poisoning by antivaricose drugs, including sclerosing agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T46902D,"Poisoning by unspecified agents primarily affecting the cardiovascular system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T46992D,"Poisoning by other agents primarily affecting the cardiovascular system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T470X2D,"Poisoning by histamine H2-receptor blockers, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T471X2D,"Poisoning by other antacids and anti-gastric-secretion drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T472X2D,"Poisoning by stimulant laxatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T473X2D,"Poisoning by saline and osmotic laxatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T474X2D,"Poisoning by other laxatives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T475X2D,"Poisoning by digestants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T476X2D,"Poisoning by antidiarrheal drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T477X2D,"Poisoning by emetics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T478X2D,"Poisoning by other agents primarily affecting gastrointestinal system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4792XD,"Poisoning by unspecified agents primarily affecting the gastrointestinal system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T480X2D,"Poisoning by oxytocic drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T481X2D,"Poisoning by skeletal muscle relaxants [neuromuscular blocking agents], intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T48202D,"Poisoning by unspecified drugs acting on muscles, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T48292D,"Poisoning by other drugs acting on muscles, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T483X2D,"Poisoning by antitussives, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T484X2D,"Poisoning by expectorants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T485X2D,"Poisoning by other anti-common-cold drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T486X2D,"Poisoning by antiasthmatics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T48902D,"Poisoning by unspecified agents primarily acting on the respiratory system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T48992D,"Poisoning by other agents primarily acting on the respiratory system, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T490X2D,"Poisoning by local antifungal, anti-infective and anti-inflammatory drugs, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T491X2D,"Poisoning by antipruritics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T492X2D,"Poisoning by local astringents and local detergents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T493X2D,"Poisoning by emollients, demulcents and protectants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T494X2D,"Poisoning by keratolytics, keratoplastics, and other hair treatment drugs and preparations, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T495X2D,"Poisoning by ophthalmological drugs and preparations, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T496X2D,"Poisoning by otorhinolaryngological drugs and preparations, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T497X2D,"Poisoning by dental drugs, topically applied, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T498X2D,"Poisoning by other topical agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T4992XD,"Poisoning by unspecified topical agent, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T500X2D,"Poisoning by mineralocorticoids and their antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T501X2D,"Poisoning by loop [high-ceiling] diuretics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T502X2D,"Poisoning by carbonic-anhydrase inhibitors, benzothiadiazides and other diuretics, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T503X2D,"Poisoning by electrolytic, caloric and water-balance agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T504X2D,"Poisoning by drugs affecting uric acid metabolism, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T505X2D,"Poisoning by appetite depressants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T506X2D,"Poisoning by antidotes and chelating agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T507X2D,"Poisoning by analeptics and opioid receptor antagonists, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T508X2D,"Poisoning by diagnostic agents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50902D,"Poisoning by unspecified drugs, medicaments and biological substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50912D,"Poisoning by multiple unspecified drugs, medicaments and biological substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50992D,"Poisoning by other drugs, medicaments and biological substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50A12D,"Poisoning by pertussis vaccine, including combinations with a pertussis component, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50A22D,"Poisoning by mixed bacterial vaccines without a pertussis component, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50A92D,"Poisoning by other bacterial vaccines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50B12D,"Poisoning by smallpox vaccines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50B92D,"Poisoning by other viral vaccines, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50Z12D,"Poisoning by immunoglobulin, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T50Z92D,"Poisoning by other vaccines and biological substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T510X2D,"Toxic effect of ethanol, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T511X2D,"Toxic effect of methanol, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T512X2D,"Toxic effect of 2-Propanol, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T513X2D,"Toxic effect of fusel oil, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T518X2D,"Toxic effect of other alcohols, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5192XD,"Toxic effect of unspecified alcohol, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T520X2D,"Toxic effect of petroleum products, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T521X2D,"Toxic effect of benzene, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T522X2D,"Toxic effect of homologues of benzene, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T523X2D,"Toxic effect of glycols, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T524X2D,"Toxic effect of ketones, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T528X2D,"Toxic effect of other organic solvents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5292XD,"Toxic effect of unspecified organic solvent, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T530X2D,"Toxic effect of carbon tetrachloride, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T531X2D,"Toxic effect of chloroform, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T532X2D,"Toxic effect of trichloroethylene, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T533X2D,"Toxic effect of tetrachloroethylene, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T534X2D,"Toxic effect of dichloromethane, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T535X2D,"Toxic effect of chlorofluorocarbons, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T536X2D,"Toxic effect of other halogen derivatives of aliphatic hydrocarbons, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T537X2D,"Toxic effect of other halogen derivatives of aromatic hydrocarbons, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5392XD,"Toxic effect of unspecified halogen derivatives of aliphatic and aromatic hydrocarbons, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T540X2D,"Toxic effect of phenol and phenol homologues, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T541X2D,"Toxic effect of other corrosive organic compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T542X2D,"Toxic effect of corrosive acids and acid-like substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T543X2D,"Toxic effect of corrosive alkalis and alkali-like substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5492XD,"Toxic effect of unspecified corrosive substance, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T550X2D,"Toxic effect of soaps, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T551X2D,"Toxic effect of detergents, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T560X2D,"Toxic effect of lead and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T561X2D,"Toxic effect of mercury and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T562X2D,"Toxic effect of chromium and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T563X2D,"Toxic effect of cadmium and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T564X2D,"Toxic effect of copper and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T565X2D,"Toxic effect of zinc and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T566X2D,"Toxic effect of tin and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T567X2D,"Toxic effect of beryllium and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T56812D,"Toxic effect of thallium, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T56892D,"Toxic effect of other metals, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5692XD,"Toxic effect of unspecified metal, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T570X2D,"Toxic effect of arsenic and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T571X2D,"Toxic effect of phosphorus and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T572X2D,"Toxic effect of manganese and its compounds, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T573X2D,"Toxic effect of hydrogen cyanide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T578X2D,"Toxic effect of other specified inorganic substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5792XD,"Toxic effect of unspecified inorganic substance, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5802XD,"Toxic effect of carbon monoxide from motor vehicle exhaust, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5812XD,"Toxic effect of carbon monoxide from utility gas, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T582X2D,"Toxic effect of carbon monoxide from incomplete combustion of other domestic fuels, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T588X2D,"Toxic effect of carbon monoxide from other source, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5892XD,"Toxic effect of carbon monoxide from unspecified source, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T590X2D,"Toxic effect of nitrogen oxides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T591X2D,"Toxic effect of sulfur dioxide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T592X2D,"Toxic effect of formaldehyde, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T593X2D,"Toxic effect of lacrimogenic gas, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T594X2D,"Toxic effect of chlorine gas, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T595X2D,"Toxic effect of fluorine gas and hydrogen fluoride, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T596X2D,"Toxic effect of hydrogen sulfide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T597X2D,"Toxic effect of carbon dioxide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T59812D,"Toxic effect of smoke, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T59892D,"Toxic effect of other specified gases, fumes and vapors, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T5992XD,"Toxic effect of unspecified gases, fumes and vapors, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T600X2D,"Toxic effect of organophosphate and carbamate insecticides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T601X2D,"Toxic effect of halogenated insecticides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T602X2D,"Toxic effect of other insecticides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T603X2D,"Toxic effect of herbicides and fungicides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T604X2D,"Toxic effect of rodenticides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T608X2D,"Toxic effect of other pesticides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6092XD,"Toxic effect of unspecified pesticide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6102XD,"Ciguatera fish poisoning, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6112XD,"Scombroid fish poisoning, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T61772D,"Other fish poisoning, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T61782D,"Other shellfish poisoning, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T618X2D,"Toxic effect of other seafood, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6192XD,"Toxic effect of unspecified seafood, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T620X2D,"Toxic effect of ingested mushrooms, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T621X2D,"Toxic effect of ingested berries, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T622X2D,"Toxic effect of other ingested (parts of) plant(s), intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T628X2D,"Toxic effect of other specified noxious substances eaten as food, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6292XD,"Toxic effect of unspecified noxious substance eaten as food, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63002D,"Toxic effect of unspecified snake venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63012D,"Toxic effect of rattlesnake venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63022D,"Toxic effect of coral snake venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63032D,"Toxic effect of taipan venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63042D,"Toxic effect of cobra venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63062D,"Toxic effect of venom of other North and South American snake, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63072D,"Toxic effect of venom of other Australian snake, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63082D,"Toxic effect of venom of other African and Asian snake, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63092D,"Toxic effect of venom of other snake, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63112D,"Toxic effect of venom of gila monster, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63122D,"Toxic effect of venom of other venomous lizard, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63192D,"Toxic effect of venom of other reptiles, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T632X2D,"Toxic effect of venom of scorpion, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63302D,"Toxic effect of unspecified spider venom, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63312D,"Toxic effect of venom of black widow spider, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63322D,"Toxic effect of venom of tarantula, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63332D,"Toxic effect of venom of brown recluse spider, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63392D,"Toxic effect of venom of other spider, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63412D,"Toxic effect of venom of centipedes and venomous millipedes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63422D,"Toxic effect of venom of ants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63432D,"Toxic effect of venom of caterpillars, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63442D,"Toxic effect of venom of bees, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63452D,"Toxic effect of venom of hornets, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63462D,"Toxic effect of venom of wasps, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63482D,"Toxic effect of venom of other arthropod, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63512D,"Toxic effect of contact with stingray, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63592D,"Toxic effect of contact with other venomous fish, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63612D,"Toxic effect of contact with Portuguese Man-o-war, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63622D,"Toxic effect of contact with other jellyfish, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63632D,"Toxic effect of contact with sea anemone, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63692D,"Toxic effect of contact with other venomous marine animals, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63712D,"Toxic effect of contact with venomous marine plant, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63792D,"Toxic effect of contact with other venomous plant, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63812D,"Toxic effect of contact with venomous frog, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63822D,"Toxic effect of contact with venomous toad, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63832D,"Toxic effect of contact with other venomous amphibian, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T63892D,"Toxic effect of contact with other venomous animals, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6392XD,"Toxic effect of contact with unspecified venomous animal, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6402XD,"Toxic effect of aflatoxin, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6482XD,"Toxic effect of other mycotoxin food contaminants, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T650X2D,"Toxic effect of cyanides, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T651X2D,"Toxic effect of strychnine and its salts, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65212D,"Toxic effect of chewing tobacco, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65222D,"Toxic effect of tobacco cigarettes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65292D,"Toxic effect of other tobacco and nicotine, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T653X2D,"Toxic effect of nitroderivatives and aminoderivatives of benzene and its homologues, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T654X2D,"Toxic effect of carbon disulfide, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T655X2D,"Toxic effect of nitroglycerin and other nitric acids and esters, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T656X2D,"Toxic effect of paints and dyes, not elsewhere classified, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65812D,"Toxic effect of latex, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65822D,"Toxic effect of harmful algae and algae toxins, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65832D,"Toxic effect of fiberglass, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T65892D,"Toxic effect of other specified substances, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T6592XD,"Toxic effect of unspecified substance, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71112D,"Asphyxiation due to smothering under pillow, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71122D,"Asphyxiation due to plastic bag, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71132D,"Asphyxiation due to being trapped in bed linens, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71152D,"Asphyxiation due to smothering in furniture, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71162D,"Asphyxiation due to hanging, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71192D,"Asphyxiation due to mechanical threat to breathing due to other causes, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71222D,"Asphyxiation due to being trapped in a car trunk, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+T71232D,"Asphyxiation due to being trapped in a (discarded) refrigerator, intentional self-harm, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X710XXD,"Intentional self-harm by drowning and submersion while in bathtub, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X711XXD,"Intentional self-harm by drowning and submersion while in swimming pool, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X712XXD,"Intentional self-harm by drowning and submersion after jump into swimming pool, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X713XXD,"Intentional self-harm by drowning and submersion in natural water, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X718XXD,"Other intentional self-harm by drowning and submersion, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X719XXD,"Intentional self-harm by drowning and submersion, unspecified, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X72XXXD,"Intentional self-harm by handgun discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X730XXD,"Intentional self-harm by shotgun discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X731XXD,"Intentional self-harm by hunting rifle discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X732XXD,"Intentional self-harm by machine gun discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X738XXD,"Intentional self-harm by other larger firearm discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X739XXD,"Intentional self-harm by unspecified larger firearm discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X7401XD,"Intentional self-harm by airgun, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X7402XD,"Intentional self-harm by paintball gun, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X7409XD,"Intentional self-harm by other gas, air or spring-operated gun, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X748XXD,"Intentional self-harm by other firearm discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X749XXD,"Intentional self-harm by unspecified firearm discharge, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X75XXXD,"Intentional self-harm by explosive material, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X76XXXD,"Intentional self-harm by smoke, fire and flames, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X770XXD,"Intentional self-harm by steam or hot vapors, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X771XXD,"Intentional self-harm by hot tap water, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X772XXD,"Intentional self-harm by other hot fluids, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X773XXD,"Intentional self-harm by hot household appliances, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X778XXD,"Intentional self-harm by other hot objects, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X779XXD,"Intentional self-harm by unspecified hot objects, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X780XXD,"Intentional self-harm by sharp glass, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X781XXD,"Intentional self-harm by knife, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X782XXD,"Intentional self-harm by sword or dagger, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X788XXD,"Intentional self-harm by other sharp object, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X789XXD,"Intentional self-harm by unspecified sharp object, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X79XXXD,"Intentional self-harm by blunt object, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X80XXXD,"Intentional self-harm by jumping from a high place, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X810XXD,"Intentional self-harm by jumping or lying in front of motor vehicle, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X811XXD,"Intentional self-harm by jumping or lying in front of (subway) train, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X818XXD,"Intentional self-harm by jumping or lying in front of other moving object, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X828XXD,"Other intentional self-harm by crashing of motor vehicle, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X830XXD,"Intentional self-harm by crashing of aircraft, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X831XXD,"Intentional self-harm by electrocution, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X832XXD,"Intentional self-harm by exposure to extremes of cold, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1
+X838XXD,"Intentional self-harm by other specified means, subsequent encounter",MBD027,Suicide attempt/intentional self-harm; subsequent encounter,1,0,1

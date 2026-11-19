@@ -1,0 +1,371 @@
+# Context
+
+This script provides select code to count behavioral health inpatient and residential facility days covered by Medicare, Medicaid, or both. Behavioral health visit days have a primary diagnosis code for substance use disorder, severe mental illness, or mild-to-moderate mental health diagnoses (as defined in scripts `select_code_to_identify_MH_conditions.Rmd` and `select_code_to_identify_SUD.Rmd`).
+
+To identify inpatient and residential facility days, this code assumes the user has created a combined claims table of Medicare encounters (from the Inpatient files) and TAF claims (from the Inpatient, Long-term, and Other Services file). 
+
+Prior to combining claim sets, users should also exclude TAF crossover claims (crossover_clm_ind == 1) as well as Medicare encounters with procedure code modifiers that indicate a "Medicaid level of care" and were thus not paid for by Medicare, including U1-U9, UA, UB, UC, and UD. See [here](https://www.hcpcsdata.com/Modifiers/U)  
+
+Once claim sets are combined, the claims table (named "claims" below) should include the following columns:  
+- bene_id  
+- claim_id  
+- from_dt (claim header begin date)    
+- thru_dt (claim header end date)  
+- line_from_dt (either the line date or revenue center from date)
+- line_thru_dt (either the line date or revenue center thru date)
+- primary diagnosis code  
+- revenue center code  
+- procedure code (cpt/hcpcs codes)  
+- ot_accmdtn_hcpcs_rate (from the TAF Other Services file)
+- source file ("taf" or "ma") 
+- file type ("ma_ip", "taf_ot", "taf_ip", "taf_lt")
+
+
+
+# Load lookup tables
+
+Load the behavioral health code lookup tables and the Milbank code sets
+
+```{r}
+# mental health icd codes
+mh_codes <- fread("mental_health_icd_codes.csv")
+
+# sud icd codes
+load("ccw30_sud_codes.RData")
+
+# behavioral health outpatient cpt codes
+bh_cpts <- fread("outpt_bh_cpts.csv")
+
+# Milbank code sets
+milbank <- fread("milbank_ip_residential_codes.csv")
+```
+
+
+# Flag and restrict to behavioral health visits
+
+```{r}
+# flag each BH condition catgegory
+claims[ , `:=` (sud_dx  = icd_dgns_cd1 %in% sud_icd10,
+                mmmi_dx = icd_dgns_cd1 %in% mh_codes[condition == "mild_mod_mh", icd10],
+                smi_dx  = icd_dgns_cd1 %in% mh_codes[condition == "smi", icd10])] %>%
+  .[ , bh_dx := mmmi_dx == T | sud_dx == T | smi_dx == T]
+
+# keep only BH claims 
+claims <- claims[bh_dx == T]
+```
+
+
+# Establish Milbank code sets
+
+Milbank code sets were adapted from the [following report](https://www.milbank.org/publications/recommendations-for-a-standardized-state-methodology-to-measure-clinical-behavioral-health-spending/)
+
+```{r}
+# inpatient codes
+mil_ip_rev <- milbank[grepl("Inpatient", setting) & code_type == "Revenue", code]
+mil_ip_pos <- milbank[grepl("Inpatient", setting) & code_type == "POS", code]
+mil_ip_cpt <- milbank[grepl("Inpatient", setting) & code_type == "CPT", code]
+
+# residential codes
+mil_res_rev <- milbank[grepl("Residential", setting) & code_type == "Revenue", code]
+mil_res_pos <- milbank[grepl("Residential", setting) & code_type == "POS", code]
+mil_res_cpt <- milbank[grepl("Residential", setting) & code_type == "CPT", code]
+```
+
+
+# Flag IP/Residential claims
+
+IP requires either revenue code or CPT + POS. Residential requires revenue code OR CPT OR POS.  
+
+```{r}
+# flag components on claim lines
+claims[ , `:=` (ip_rev  = rev_cntr %in% mil_ip_rev,
+                ip_poscpt = (hcpcs_cd %in% mil_ip_cpt | ot_accmdtn_hcpcs_rate %in% mil_ip_cpt) & plcsrvc %in% mil_ip_pos, 
+                res_rev = rev_cntr %in% mil_res_rev,
+                res_cpt = hcpcs_cd %in% mil_res_cpt | ot_accmdtn_hcpcs_rate %in% mil_res_cpt,
+                res_pos = plcsrvc  %in% mil_res_pos)] 
+
+# flag IP/Res claim lines
+claims[ , `:=` (ip  = ip_rev  == T | ip_poscpt == T, 
+                res = res_rev == T | res_cpt   == T | res_pos == T)] 
+
+# roll flag to the claim level
+claims[ , c("ip", "res") := lapply(.SD, max), .SDcols = c("ip", "res"), by = .(bene_id, clm_id, source)]
+ 
+# if a claim is both IP and Res, we count it as IP
+claims[ip == T & res == T, res := F]
+```
+
+
+# Limit to IP/Res claim lines
+  
+```{r}
+ipres_all <- claims[(ip == T  &  (ip_poscpt == T | ip_rev == T))  |
+                    (res == T &  (res_cpt == T | res_pos == T | res_rev == T))]
+```
+
+ 
+# Drop some MA residential claims 
+
+We dropped MA claims that were flagged residential based on place of service alone. It is our understanding that MA doesn't cover residential stays, so if the claim does not also include a valid CPT or revenue center code we drop it here.
+
+```{r}
+ipres_all <- ipres_all[!(res == T & res_pos == T & res_cpt == F & res_rev == F & source == "ma")]
+```
+
+
+# Create setting variable
+ 
+```{r}
+ipres_all[ , setting := ifelse(ip == T, "ip", "res")]
+```
+
+
+# Identify IP/Residential dates
+
+To identify inpatient and residential days, we use line dates when available and claim header dates when they are not.
+
+```{r}
+ipres_all[ , `:=` (start_dt = as.Date(ifelse(!is.na(line_from_dt), line_from_dt, from_dt)),
+                   end_dt   = as.Date(ifelse(!is.na(line_thru_dt), line_thru_dt, thru_dt)))]
+
+
+# some facility claims bill for the entire month as evidenced by the adsmn/disch or header from/thru dates but have a claim line start and end date of the same day. for these we change the end date to the end of the month
+ipres_all[file %in% c("taf_ip", "taf_lt") & start_dt == end_dt & mday(start_dt) == 1, 
+          end_dt := ceiling_date(end_dt, "month") - 1]
+
+# if there are any cases in which start_dt occurs after end_dt, set start_dt to end_dt
+ipres_all[start_dt > end_dt, start_dt := end_dt]
+```
+
+
+# Transform data to one day per row
+
+```{r}
+# flag one day claims
+ipres_all[ , days := as.numeric(end_dt - start_dt + 1)] %>% .[ , oneday := days == 1]
+
+# separate one day and multi-day claims
+ipres_multiday <- ipres_all[oneday == F] %>% .[ , rownum := .I] 
+ipres_oneday <- ipres_all[oneday == T]
+
+# expand long so each day is on a separate row
+ipres_multiday_expand <- ipres_multiday[, .(date = seq(start_dt, end_dt, by = "day")), by = rownum]
+
+# add back other vars
+ipres_multiday_expand <- merge(ipres_multiday_expand, 
+                               ipres_multiday,
+                               by = "rownum", 
+                               all = T)
+
+# set start_dt and end_dt equal to date
+ipres_multiday_expand[, `:=`(daystart_dt = date, dayend_dt = date)] %>%
+  .[, c("date", "rownum") := NULL]
+
+# rejoin one-day and multi-day claims,  nrow should grow. 
+nrow(ipres_all)
+ipres_all <- rbind(ipres_oneday[ , `:=` (daystart_dt = start_dt, dayend_dt = end_dt)], 
+                   ipres_multiday_expand)
+nrow(ipres_all)
+
+
+# limit to days in study year
+ipres_all <- ipres_all[year(daystart_dt) == 2021]
+
+# drop vars
+ipres_all[ , c("days", "oneday") := NULL]
+rm(ipres_oneday, ipres_multiday, ipres_multiday_expand)
+```
+
+
+# Drop more crossover claims  
+
+Some TAF claims have the same date of service, primary diagnosis code, and procedure code as a Medicare encounter. We consider these "crossover claims" that weren't flagged by crossover_clm_ind == 1. For inpatient crossovers, we exclude the TAF claims from the dataset and attribute the service to Medicare. For residential stay crossovers, we exclude the Medicare claim from the dataset and attribute the service to Medicaid.   
+
+*Note: the res definition includes POS on its own, but we don't check for POS matches because MA and TAF could be paying for different CPTs in the res setting. POS is too vague to consider it a match just based on that.* 
+
+Before checking to see if MA and TAF claims match by procedure code, we need to clean up the TAF OT procedure code, since it can be in one of two different fields (hcpcs_cd or ot_accmdtn_hcpcs_rate). We'll create a unified procedure code variable that pulls the Milbank CPT from whichever field has it. 
+
+```{r}
+# if the Milbank CPT code is in the ot_accmdtn_hcpcs_rate field, move that value into hcpcs_cd
+ipres_all[(res_cpt == T | ip_poscpt == T) & !hcpcs_cd %in% c(mil_res_cpt, mil_ip_cpt), hcpcs_cd := ot_accmdtn_hcpcs_rate]
+
+ipres_all$ot_accmdtn_hcpcs_rate <- NULL
+```
+
+
+## Drop IP crossover claims
+
+```{r}
+# separate MA and TAF, IP and Res
+all_ip_ma   <- ipres_all[source == "ma"  & setting == "ip"]
+all_ip_taf  <- ipres_all[source == "taf" & setting == "ip"] 
+all_res_ma  <- ipres_all[source == "ma"  & setting == "res"]
+all_res_taf <- ipres_all[source == "taf" & setting == "res"]
+
+rm(ipres_all)
+
+# merge MA onto TAF by date, diagnosis, and CPT
+all_ip_taf <- merge(all_ip_taf,
+                    unique(all_ip_ma[!is.na(hcpcs_cd), .(bene_id, daystart_dt, dayend_dt, 
+                                                         icd_dgns_cd1, hcpcs_cd, crossover_cpt = T)]),
+                    by = c("bene_id", "daystart_dt", "dayend_dt", "icd_dgns_cd1", "hcpcs_cd"), 
+                    all.x = T) %>%
+  .[is.na(crossover_cpt) , crossover_cpt := F]
+
+
+# merge MA onto TAF by date, dx and Rev code
+all_ip_taf <- merge(all_ip_taf,
+                    unique(all_ip_ma[!is.na(rev_cntr), .(bene_id, daystart_dt, dayend_dt, 
+                                                         icd_dgns_cd1, rev_cntr, crossover_rev = T)]),
+                    by = c("bene_id", "daystart_dt", "dayend_dt", "icd_dgns_cd1", "rev_cntr"), 
+                    all.x = T) %>%
+  .[is.na(crossover_rev) , crossover_rev := F]
+
+
+
+# create overall flag - true if rev is crossover and cpt is crossover or missing, OR
+#                              cpt is crossover and rev is crossover or missing
+# (necessary because some days have both rev and CPT)
+all_ip_taf[ , crossover := (crossover_rev == T & (crossover_cpt == T | is.na(hcpcs_cd))) |
+                           (crossover_cpt == T & (crossover_rev == T | is.na(rev_cntr)))] %>%
+  .[ , c("crossover_rev", "crossover_cpt") := NULL]
+
+# bind TAF and MA back together
+all_ip <- rbind(all_ip_taf, 
+                all_ip_ma[ , crossover := F])
+
+# drop ip crossover claims
+all_ip <- all_ip[crossover == F]
+```
+
+
+## Drop Residential crossover claims
+
+```{r}
+# merge TAF onto MA by date, diagnosis, and CPT
+all_res_ma <- merge(all_res_ma,
+                    unique(all_res_taf[!is.na(hcpcs_cd), .(bene_id, daystart_dt, dayend_dt, 
+                                                           icd_dgns_cd1, hcpcs_cd, crossover_cpt = T)]),
+                    by = c("bene_id", "daystart_dt", "dayend_dt", "icd_dgns_cd1", "hcpcs_cd"), 
+                    all.x = T) %>%
+  .[is.na(crossover_cpt) , crossover_cpt := F]
+
+
+# merge TAF onto MA by date, diagnosis, and revenue code 
+all_res_ma <- merge(all_res_ma,
+                    unique(all_res_taf[!is.na(rev_cntr), .(bene_id,daystart_dt, dayend_dt, 
+                                                           icd_dgns_cd1, rev_cntr, crossover_rev = T)]),
+                    by = c("bene_id", "daystart_dt", "dayend_dt", "icd_dgns_cd1", "rev_cntr"), 
+                    all.x = T) %>%
+  .[is.na(crossover_rev) , crossover_rev := F]
+
+
+# create overall flag
+all_res_ma[ , crossover := (crossover_rev == T & (crossover_cpt == T | is.na(hcpcs_cd))) |
+                           (crossover_cpt == T & (crossover_rev == T | is.na(rev_cntr)))] %>%
+  .[ , c("crossover_rev", "crossover_cpt") := NULL]
+ 
+# bind TAF and MA back together
+all_res <- rbind(all_res_taf[ , crossover := F], 
+                 all_res_ma)
+
+# drop residential crossovers
+all_res <- all_res[crossover == F]
+```
+
+
+## Recombine claims
+
+```{r}
+ipres_all <- rbind(all_ip, 
+                   all_res)
+
+rm(all_res, all_ip)
+```
+
+
+# Address overlapping IP/Res days
+
+For single-day claims, we find it unlikely that someone would be discharged from the hospital, enter a residential facility and be discharged on the same day. For these claims we'll set the setting to inpatient.
+
+For multi-day claims where at least 2 days of the encounter overlap we count the overlapping days as inpatient (single day overlaps are likely a same day transfer). 
+
+```{r}
+# group consecutive days with a visit_id
+ipres_all <- ipres_all[order(bene_id, start_dt, end_dt)]
+ipres_all[ , visit_id := chse::overlapping(start_dt, 
+                                           end_dt, 
+                                           maxgap = -2), by = bene_id]
+
+# roll up values by visit_id
+ipres_all[ , `:=` (visstart_dt = min(start_dt), 
+                   visend_dt = max(end_dt), 
+                   smi_dx = max(smi_dx), 
+                   mmmi_dx = max(mmmi_dx), 
+                   sud_dx = max(sud_dx),
+                   ip = max(setting %in% "ip"), 
+                   res = max(setting %in% "res")), by = .(bene_id, visit_id)] %>%
+  .[ , days := as.numeric(visend_dt - visstart_dt + 1)] 
+
+
+# if there are overlap settings, count as IP (the higher level of care)
+ipres_all[ip == T & res == T, res := F]
+
+# if there is a 1-day IP and a 1-day Res on the same day, these wouldn't have been caught but should be fixed. 
+
+# make IP if any IP on the day
+ipres_all[ , ip_new := max(ip), by = .(bene_id, visstart_dt, visend_dt)]
+
+# adjust
+ipres_all[ , ip := ip_new][ , "ip_new" := NULL]
+
+# recreate setting var
+ipres_all[ , setting := ifelse(ip == T, "ip", "res")]
+```
+
+
+# Assign diagnosis to visit  
+
+Flag the visit as SUD if any SUD, then SMI if any SMI, then mild to moderate. 
+
+```{r}
+ipres_all[ , dx_cat := fcase(sud_dx == T, "sud",
+                             smi_dx == T, "smi",
+                             mmmi_dx == T, "mmmi")]
+```
+
+
+# Roll up to days
+
+Roll up to TAF, MA, or both per setting/diagnosis/day.  
+
+```{r}
+# flag if day has both MA and TAF for the setting/dx
+ipres_all[ , both := uniqueN(source) == 2, by = .(bene_id, daystart_dt, setting, dx_cat)]
+
+# update source to both taf/ma
+ipres_all[both == T, source := "tafma"]
+```
+
+
+# Sum days 
+
+There should be at most 2 rows per bene-day, 1 for IP and 1 for Residential, on a transfer day.
+
+```{r}
+# make unique by day
+ipres_days <- unique(ipres_all[ , .(bene_id, dx_cat, daystart_dt, 
+                                    setting, source, year = year(daystart_dt))])
+
+# sum visits by setting and diagnosis
+ipres_days <- ipres_days[ , .(days = uniqueN(daystart_dt)), by = .(bene_id, year, setting, source, dx_cat)]
+
+# create a column name combining source, setting, and dx_cat
+ipres_days[ , varname := paste(setting, "days", dx_cat, source, sep = "_")]
+
+# reshape to wide format
+ipres_days <- dcast(ipres_days, bene_id + year ~ varname, value.var = "days", fill = 0) 
+```
+
+
+

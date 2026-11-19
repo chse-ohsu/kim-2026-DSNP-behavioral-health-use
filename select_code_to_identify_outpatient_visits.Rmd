@@ -1,0 +1,197 @@
+# Context
+
+This script provides select code to count Medicare and Medicaid in-person outpatient and telehealth visits for behavioral health. A visit is considered for behavioral health if the primary diagnosis code is for substance use disorder, severe mental illness, or mild-to-moderate mental health diagnoses (as defined in scripts `select_code_to_identify_MH_conditions.Rmd` and `select_code_to_identify_SUD.Rmd`) and has a CPT code used during mental health specific or primary care visits, including those for assessment/screening, community support, drug visits, evaluation and management, psychiatry, and psychotherapy. We developed our CPT code list through consultation with subject matter experts and cross-referencing the Milbank Memorial Fund's recommendations on measuring behavioral health spending (Table S1) in 
+
+Sinha V, Rourke E, Condon MJ, Brandel W. Recommendations for a Standardized State Methodology to Measure Clinical Behavioral Health Spending. Milbank Memorial Fund & Freedman HealthCare; 2024.
+
+This code assumes the user has created a combined claims table of professional Medicare encounters (from the HHA and Carrier files) and professional TAF claims (from the Other Services file). Prior to combining claim sets, users should restrict the TAF OS file to professional claims as defined [here](https://www.medicaid.gov/dq-atlas/downloads/background-and-methods/TAF-DQ-Proc-Cd-OT-Prof.pdf):  
+
+"To be classified as a professional claim, the record should meet one of the following criteria:  
+- (1) have a valid place of service code (SRVC_PLC_CD) but a missing or invalid revenue code (REV_CD) on all lines associated with the claim; or  
+- (2) have a missing or invalid type of bill code, place of service code, and revenue codes but a valid procedure code (PRCDR_CD) on all lines associated with the claim."  
+
+Prior to combining claim sets, users should also exclude TAF crossover claims (crossover_clm_ind == 1) as well as Medicare encounters with procedure code modifiers that indicate a "Medicaid level of care" and were not paid for by Medicare, including U1-U9, UA, UB, UC, and UD. See [here](https://www.hcpcsdata.com/Modifiers/U)  
+
+Once claim sets are combined, the claims table (named "op_all" below) should include the following columns:  
+- bene_id  
+- claim_id  
+- from_dt (claim line begin date)    
+- thru_dt (claim line end date)  
+- dgns_cd_1 (primary diagnosis code)    
+- line_prcdr_cd (cpt/hcpcs codes)  
+- mdfr_cd (cpt/hcpcs modifier codes)
+- pos_cd (place of service code)  
+- source file ("taf" or "ma")  
+
+
+# Load behavioral health code lookup tables
+
+```{r}
+# mental health icd codes
+mh_codes <- fread("mental_health_icd_codes.csv")
+
+# sud icd codes
+load("ccw30_sud_codes.RData")
+
+# behavioral health outpatient cpt codes
+bh_cpts <- fread("outpt_bh_cpts.csv")
+```
+
+
+# Limit claims
+
+## To bene months observed
+
+Keep only claim lines with an end date during which the enrollee was observed in the study cohort. In this chunk, mbsf is a table of enrollees in the analytic study sample at the enrollee-month level.
+
+```{r}
+op_all[, bene_mo := paste(bene_id, month(thru_dt), year(thru_dt), sep = "_")]
+op_all <- merge(op_all, mbsf[ , .(bene_mo)], by = "bene_mo", all = F)
+```
+
+
+## To behavioral health claims
+
+Keep only professional claims where the primary diagnosis is a behavioral health diagnosis.  
+
+```{r}
+# select sud icd codes from lookup table
+sud_icd10 <-  c(ccw_sud$aud$diagnosis$icd10, ccw_sud$dud$diagnosis$icd10, ccw_sud$oud$diagnosis$icd10)
+
+# flag claim lines where the primary dx on the claim belongs to sud, smi, or mild_mod_mh
+op_all[ , dx_cat := fcase(icd_dgns_cd1 %in% sud_icd10, "sud",
+                          icd_dgns_cd1 %in% mh_codes[condition == "mild_mod_mh", icd10], "mmmi", 
+                          icd_dgns_cd1 %in% mh_codes[condition == "smi", icd10], "smi")]
+```
+
+
+## To behavioral health outpatient CPTs
+
+Keep only claim lines where the procedure code is for behavioral health. 
+
+```{r}
+# merge the CPT flags to the 
+op_all <- merge(op_all, 
+                bh_cpts[ , .(hcpcs_cd = code, sud_op, mh_op)], 
+                by = "hcpcs_cd", 
+                all.x = T)
+ 
+# flag valid CPT separately for MH and SUD
+op_all[ , valid_cpt := (dx_cat == "sud" & sud_op %in% T) |
+                       (dx_cat != "sud" & mh_op %in% T)]
+
+# limit data to valid cpts
+op_all <- op_all[valid_cpt == T]
+
+# drop vars
+op_all[ , c("valid_cpt", "mh_op", "sud_op") := NULL]
+```
+
+
+## Transform data to 1 day per row
+
+Most claim line services are for one day. For multi-day services we'll transform data into one row per day.
+
+```{r}
+# calculate number of days per claim line service
+op_all[ , days := as.numeric(thru_dt - from_dt + 1)] %>% .[ , oneday := days == 1]
+
+# separate one day and multi-day services
+op_multiday <- op_all[oneday == F] %>% .[ , rownum := seq_along(1:.N)]
+op_oneday   <- op_all[oneday == T]
+
+# expand long so each day is on a separate row
+op_multiday_expand <- op_multiday[, .(date = seq(from_dt, thru_dt, by = "day")), by = rownum]
+
+# add back other vars
+op_multiday_expand <- merge(op_multiday_expand, 
+                            op_multiday[ , c("from_dt", "thru_dt") := NULL],
+                            by = "rownum", all = T)
+
+# set from_dt and thru_dt equal to date
+op_multiday_expand[, `:=`(from_dt = date, thru_dt = date)] %>%
+  .[, c("date", "rownum") := NULL]
+
+# rejoin one-day and multi-day. nrow should grow. 
+nrow(op_all)
+op_all <- rbind(op_oneday, op_multiday_expand)
+nrow(op_all)
+
+# drop vars
+op_all[ , c("days", "oneday") := NULL]
+rm(op_oneday, op_multiday, op_multiday_expand)
+```
+
+
+## Drop more crossover claims from TAF
+
+Some TAF claims have the same date of service, primary diagnosis code, and procedure code as a MA encounter. We consider these "crossover claims" that weren't flagged by crossover_clm_ind == 1. We exclude these from the dataset and attribute these services to MA.   
+
+```{r}
+# check the number of same day claims across sources
+op_all[ , sameday := uniqueN(source) == 2, by = c("bene_id", "from_dt")] 
+chse::ptab(op_all$sameday)
+
+# separate MA and TAF claims
+op_all_ma  <- op_all[source == "ma"]
+op_all_taf <- op_all[source == "taf"] 
+
+# merge MA onto TAF by date and CPT
+op_all_taf <- merge(op_all_taf, 
+                    unique(op_all_ma[ , .(bene_id, from_dt, thru_dt, 
+                                          icd_dgns_cd1, hcpcs_cd, crossover = T)]), 
+                    by = c("bene_id", "from_dt", "thru_dt", "icd_dgns_cd1", "hcpcs_cd"), all.x = T) %>%
+  .[is.na(crossover) , crossover :=  F]
+
+# bind TAF and MA back together
+op_all <- rbind(op_all_taf,
+                op_all_ma[ , crossover := F])
+
+# drop crossovers
+chse::ptab(op_all$crossover)
+op_all <- op_all[crossover == F]
+
+# re-check TAF claims on same day as MA
+op_all[ , sameday := uniqueN(source) == 2, by = c("bene_id", "from_dt")] 
+chse::ptab(op_all$sameday)
+```
+
+
+# Flag telehealth
+
+Telehealth visits include at least one of the following:  
+
+- A modifier code of 95, GT, 93, FQ, FR    
+- A place of service code of 2 or 10   
+- A telehealth CPT: 99441:99443, 98966:98968  
+
+```{r}
+# flag services with a modifier code
+op_all[ , tele_mod := Reduce(`|`, lapply(.SD, `%in%`, c("95", "GT", "93", "FQ", "FR"))), .SDcols = paste0("mdfr_cd", 1:4)]
+
+# create flag
+op_all[ , setting :=  ifelse(tele_mod == T | plcsrvc %in% c("02", "10") | hcpcs_cd %in% bh_cpts[telehealth == T, code], "telehealth", "inperson")] 
+```
+
+
+# Sum visits by year
+
+Count Outpatient BH visits
+```{r}
+# create year variable
+op_all[, year :=  year(thru_dt)]
+
+# limit claims to analysis year
+op_all <- op_all[year == year_n]
+
+# sum visits by setting and diagnosis
+op_visits <- op_all[ , .(n = uniqueN(thru_dt)), by = .(bene_id, year, source, setting, dx_cat)]
+
+# create a column name combining source, setting and dx_cat
+op_visits[ , varname := paste("op", setting, dx_cat, source, "n", sep = "_")]
+ptab(op_visits$varname)
+
+# reshape to wide format
+op_visits <- dcast(op_visits, bene_id + year ~ varname, value.var = "n", fill = 0) 
+```
+
